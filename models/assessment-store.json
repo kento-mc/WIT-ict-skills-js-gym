@@ -10,7 +10,8 @@
       "upperArm": 65,
       "waist": 125.0,
       "hips": 110,
-      "trendIsPositive": true
+      "trendIsPositive": true,
+      "comment": []
     },
     {
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
@@ -22,7 +23,8 @@
       "upperArm": 65,
       "waist": 125.5,
       "hips": 110,
-      "trendIsPositive": false
+      "trendIsPositive": false,
+      "comment": []
     },
     {
       "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
@@ -34,7 +36,8 @@
       "upperArm": 23,
       "waist": 65.0,
       "hips": 80,
-      "trendIsPositive": true
+      "trendIsPositive": true,
+      "comment": []
     }
   ]
 }

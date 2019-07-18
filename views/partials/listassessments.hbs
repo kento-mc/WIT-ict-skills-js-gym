@@ -6,7 +6,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each assessments}}
+      {{#each assessments (an array in the viewData object passed from the assessment controller)}}
         <tr>
           {{> assessmentdata}}
           <td class="center aligned">

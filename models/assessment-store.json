@@ -1,16 +1,14 @@
 {
-  "users": [
+  "assessments": [
     {
-      "firstName": "Homer",
-      "lastName": "Simpson",
-      "gender": "M",
-      "email": "homer@simpson.com",
-      "password": "secret",
-      "address": "address: 742 Evergreen Terrace, Springfield USA",
-      "height": 1.8,
-      "startingWeight": 120,
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "assessments": []
+      "dateTime": 2019,
+      "weight": 150.0,
+      "chest": 100,
+      thigh: 80,
+      upperArm: 65,
+      waist: 125.0,
+      hips: 110,
+      trendIsPositive: true
     },
     {
       "firstName": "Marge",

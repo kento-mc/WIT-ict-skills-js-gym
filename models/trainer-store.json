@@ -1,0 +1,14 @@
+{
+  "trainers": [
+    {
+      "firstName": "Rainier",
+      "lastName": "Wolfcastle",
+      "gender": "M",
+      "email": "rainier@simpson.com",
+      "password": "secret",
+      "address": "Somewhere, Austria",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "assessments": []
+    }
+  ]
+}  

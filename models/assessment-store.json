@@ -1,26 +1,40 @@
 {
   "assessments": [
     {
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": xxxxx,
       "dateTime": 2019,
       "weight": 150.0,
       "chest": 100,
-      thigh: 80,
-      upperArm: 65,
-      waist: 125.0,
-      hips: 110,
-      trendIsPositive: true
+      "thigh": 80,
+      "upperArm": 65,
+      "waist": 125.0,
+      "hips": 110,
+      "trendIsPositive": true
     },
     {
-      "firstName": "Marge",
-      "lastName": "Simpson",
-      "gender": "F",
-      "email": "marge@simpson.com",
-      "password": "secret",
-      "address": "address: 742 Evergreen Terrace, Springfield USA",
-      "height": 1.5,
-      "startingWeight": 65,
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "assessments": []
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": xxxxx,
+      "dateTime": 2019,
+      "weight": 151.0,
+      "chest": 100,
+      "thigh": 80,
+      "upperArm": 65,
+      "waist": 125.5,
+      "hips": 110,
+      "trendIsPositive": false
+    },
+    {
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "trainerid": xxxxx,
+      "dateTime": 2019,
+      "weight": 65.0,
+      "chest": 80,
+      "thigh": 40,
+      "upperArm": 23,
+      "waist": 65.0,
+      "hips": 80,
+      "trendIsPositive": true
     }
   ]
 }

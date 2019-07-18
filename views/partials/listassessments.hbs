@@ -1,0 +1,22 @@
+ <table class="ui fixed table">
+    <thead>
+      <tr>
+        {{> assessmentheader}}
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each assessments}}
+        <tr>
+          {{> assessmentdata}}
+          <td class="center aligned">
+            <a href="/dashboard/${member.id}/deleteassessment/${assessment.id}">
+              <h1>
+                <i class="trash alternate icon"></i>
+              </h1>
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+</table>

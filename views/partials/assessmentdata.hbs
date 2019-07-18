@@ -1,0 +1,36 @@
+<td colspan="2">
+    ${_assessment.convertDateTime(_assessment.getDateTime())}
+</td>
+<td>
+    ${_assessment.weight} kg
+</td>
+<td>
+    ${_assessment.chest} cm
+</td>
+<td>
+    ${_assessment.thigh} cm
+</td>
+<td>
+    ${_assessment.upperArm} cm
+</td>
+<td>
+    ${_assessment.waist} cm
+</td>
+<td>
+    ${_assessment.hips} cm
+</td>
+<td>
+    #{if _assessment.trendIsPositive == true}
+        <h1>
+            <i class="green angle double up icon"></i>
+        </h1>
+    #{/if}
+    #{else}
+        <h1>
+            <i class="red angle double down icon"></i>
+        </h1>
+    #{/else}
+</td>
+<td colspan="2">
+    ${_assessment.comment}
+</td>

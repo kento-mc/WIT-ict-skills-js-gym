@@ -1,0 +1,43 @@
+<section class="ui segment">
+    <h1 class="ui four column grid">
+        <div class="center aligned column">
+            <i class="big user icon"></i>
+        </div>
+        <div class="center aligned column">
+            #{if _member.isIdealWeight(_member.id) == true}
+                <i class="big green tachometer alternate icon"></i>
+            #{/if}
+            #{else}
+                <i class="big red tachometer alternate icon"></i>
+            #{/else}
+        </div>
+        <div class="center aligned column">
+            <i class="big heartbeat icon"></i>${_member.calculateBMI(_member.id)}
+        </div>
+        <div class="center aligned column">
+            <i class="big user md icon"></i>
+        </div>
+    </h1>
+    <div class="ui four column grid">
+        <div class="center aligned column">
+            <header class="ui header">
+            ${_member.firstName.toUpperCase()} ${_member.lastName.toUpperCase()}
+            </header>
+        </div>
+        <div class="center aligned column">
+            <header class="ui header">
+                IDEAL WEIGHT INDICATOR
+            </header>
+        </div>
+        <div class="center aligned column">
+            <header class="ui header">
+                BMI
+            </header>
+        </div>
+        <div class="center aligned column">
+            <header class="ui header">
+            ${_member.bmiCategory(_member.id)}
+            </header>
+        </div>
+    </div>
+</section>

@@ -14,18 +14,18 @@ const assessment = {
     };
     response.render('assessment', viewData);
   },
-  
-  addSong(request, response) {
+/*  
+  addComment(request, response) {
     const assessmentID = request.params.id;
     const assessment = assessmentStore.getPlaylist(assessmentID);
-    const newSong = {
+    const newComment = {
       id: uuid(),
       title: request.body.title,
       artist: request.body.artist,
       duration: Number(request.body.duration),
     };
-    logger.debug('New Song = ', newSong);
-    playlistStore.addSong(assessmentID, newSong);
+    logger.debug('New Song = ', newComment);
+    assessmentStore.addComment(assessmentID, newComment);
     response.redirect('/assessment/' + assessmentID);
   },
   
@@ -33,9 +33,9 @@ const assessment = {
     const assessmentID = request.params.id;
     const songId = request.params.songid;
     logger.debug(`Deleting Song ${songId} from Assessment ${assessmentID}`);
-    playlistStore.removeSong(assessmentID, songId);
-    response.redirect('/playlist/' + assessmentID);
-  },
+    assessmentStore.removeSong(assessmentID, songId);
+    response.redirect('/assessment/' + assessmentID);
+  },*/
 };
 
-module.exports = playlist;
+module.exports = assessment;

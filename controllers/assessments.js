@@ -29,7 +29,7 @@ const assessment = {
     response.redirect('/assessment/' + assessmentID);
   },
   
-  deleteSong(request, response) {
+  deleteComment(request, response) {
     const assessmentID = request.params.id;
     const songId = request.params.songid;
     logger.debug(`Deleting Song ${songId} from Assessment ${assessmentID}`);

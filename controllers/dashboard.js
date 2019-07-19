@@ -15,7 +15,7 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const newAssessment = {
       id: uuid(),
-      userid: loggedInMember.id,
+      memberid: loggedInMember.id,
       //trainerid: ,
       //dateTime: now(),
       weight: 150.0,

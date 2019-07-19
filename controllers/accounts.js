@@ -33,19 +33,19 @@ const accounts = {
   },
 
   register(request, response) {
-    const user = request.body;
-    user.id = uuid();
-    memberstore.addUser(user);
-    logger.info(`registering ${user.email}`);
+    const member = request.body;
+    member.id = uuid();
+    memberstore.addUser(member);
+    logger.info(`registering ${member.email}`);
     response.redirect('/');
   },
 
   authenticate(request, response) {
-    const user = memberstore.getMemberByEmail(request.body.email);
-    if (user) {
-      if (request.body.password == user.password) {
-        response.cookie('playlist', user.email);
-        logger.info(`logging in ${user.email}`);
+    const member = memberstore.getMemberByEmail(request.body.email);
+    if (member) {
+      if (request.body.password == member.password) {
+        response.cookie('playlist', member.email);
+        logger.info(`logging in ${member.email}`);
         response.redirect('/dashboard');
       } else {
         response.redirect('/login');
@@ -56,8 +56,8 @@ const accounts = {
   },
 
   getCurrentUser(request) {
-    const userEmail = request.cookies.playlist;
-    return userstore.getUserByEmail(userEmail);
+    const memberEmail = request.cookies.playlist;
+    return memberStore.getMemberByEmail(memberEmail);
   },
 };
 

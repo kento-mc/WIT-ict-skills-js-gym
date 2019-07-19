@@ -12,14 +12,19 @@ const dashboard = {
   },
   
   addAssessment(request, response) {
-    const loggedInUser = accounts.getCurrentUser(request);
+    const loggedInMember = accounts.getCurrentMember(request);
     const newAssessment = {
       id: uuid(),
-      /*
-      userid: loggedInUser.id,
-      title: request.body.title,
-      songs: [],
-      */
+      userid: loggedInMember.id,
+      //trainerid: ,
+      //dateTime: now(),
+      weight: 150.0,
+      chest: 100,
+      thigh: 80,
+      upperArm: 65,
+      waist: 125.0,
+      hips: 110,
+      comment: "",
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);

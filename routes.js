@@ -15,7 +15,10 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
-router.get("/dashboard", dashboard.index);
+router.get('/dashboard', dashboard.index);
+router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
+router.post('/dashboard/addassessment', dashboard.addAssessment);
+
 router.get("/about", about.index);
 
 module.exports = router;

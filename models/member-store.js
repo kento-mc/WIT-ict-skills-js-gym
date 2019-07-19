@@ -21,7 +21,7 @@ const memberStore = {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
-  getMemberyEmail(email) {
+  getMemberByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
   },
 };

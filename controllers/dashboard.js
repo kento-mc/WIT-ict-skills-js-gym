@@ -8,11 +8,12 @@ const assessmentStore = require("../models/assessment-store")
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
-    const loggedInUser = accounts.getCurrentMember(request);
+    const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: "Assessment dashboard",
-      assessments: assessmentStore.getMemberAssessments(loggedInUser.id),
+      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };
+    logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)
     response.render("dashboard", viewData);
   },
   

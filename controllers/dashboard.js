@@ -7,6 +7,7 @@ const dashboard = {
     logger.info("dashboard rendering");
     const viewData = {
       title: "Assessment dashboard",
+      assessments: assessmentStore.getMemberAssessments(loggedInUser.id),
     };
     response.render("dashboard", viewData);
   },

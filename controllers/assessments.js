@@ -8,9 +8,10 @@ const assessment = {
   index(request, response) {
     const assessmentID = request.params.id;
     logger.debug('Assessment id = ', assessmentID);
+    const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
       title: 'Assessment',
-      assessment: assessmentStore.getPlaylist(assessmentID),
+      assessment: assessmentStore.getAssessment(assessmentID),
     };
     response.render('assessment', viewData);
   },

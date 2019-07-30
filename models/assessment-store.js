@@ -16,7 +16,7 @@ const assessmentStore = {
     return this.store.findOneBy(this.collection, { id: id });
   },
   
-  getUserAssessments(userid) {
+  getMemberAssessments(userid) {
     return this.store.findBy(this.collection, { userid: userid });
   },
 

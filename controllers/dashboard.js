@@ -1,10 +1,12 @@
 "use strict";
 
 const logger = require("../utils/logger");
+const accounts = require("../models/member-store")
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
+    const loggedInUser = accounts.getCurrentMember(request);
     const viewData = {
       title: "Assessment dashboard",
       assessments: assessmentStore.getMemberAssessments(loggedInUser.id),

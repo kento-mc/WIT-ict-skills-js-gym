@@ -1,8 +1,9 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const accounts = require ('./accounts.js');
-//const memberstore = require('../models/member-store');
+const accounts = require ("./accounts.js");
+//const memberStore = require('../models/member-store');
+const assessmentStore = require("../models/assessment-store")
 
 const dashboard = {
   index(request, response) {

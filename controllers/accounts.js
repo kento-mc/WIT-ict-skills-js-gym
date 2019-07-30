@@ -1,6 +1,6 @@
 'use strict';
 
-const memberstore = require('../models/member-store');
+const memberStore = require('../models/member-store');
 const logger = require('../utils/logger');
 const uuid = require('uuid');
 
@@ -41,10 +41,10 @@ const accounts = {
   },
 
   authenticate(request, response) {
-    const member = memberstore.getMemberByEmail(request.body.email);
+    const member = memberStore.getMemberByEmail(request.body.email);
     if (member) {
       if (request.body.password == member.password) {
-        response.cookie('playlist', member.email);
+        response.cookie('member', member.email);
         logger.info(`logging in ${member.email}`);
         response.redirect('/dashboard');
       } else {
@@ -56,7 +56,7 @@ const accounts = {
   },
 
   getCurrentMember(request) {
-    const memberEmail = request.cookies.playlist;
+    const memberEmail = request.cookies.member;
     return memberStore.getMemberByEmail(memberEmail);
   },
 };

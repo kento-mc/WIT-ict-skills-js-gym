@@ -2,24 +2,24 @@
   "assessments": [
     {
       "id": "asdlfgkjsdg",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "trainerid": "049witejk",
       "dateTime": 2019,
-      "weight": 150,
+      "weight": 150.0,
       "chest": 100,
       "thigh": 80,
       "upperArm": 65,
-      "waist": 125,
+      "waist": 125.0,
       "hips": 110,
       "trendIsPositive": true,
       "comment": ""
     },
     {
       "id": "asdlfgkjsd5324g",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "trainerid": "owaetilajsed",
       "dateTime": 2019,
-      "weight": 151,
+      "weight": 151.0,
       "chest": 100,
       "thigh": 80,
       "upperArm": 65,
@@ -30,40 +30,16 @@
     },
     {
       "id": "asdlfgkj3425sdg",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "memberid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "trainerid": "aoweitld",
       "dateTime": 2019,
-      "weight": 65,
+      "weight": 65.0,
       "chest": 80,
       "thigh": 40,
       "upperArm": 23,
-      "waist": 65,
+      "waist": 65.0,
       "hips": 80,
       "trendIsPositive": true,
-      "comment": ""
-    }
-  ],
-  "assessmentCollection": [
-    {
-      "id": "09b63f16-8059-43e3-be48-c0e8e89ed56f",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": 150,
-      "chest": 100,
-      "thigh": 80,
-      "upperArm": 65,
-      "waist": 125,
-      "hips": 110,
-      "comment": ""
-    },
-    {
-      "id": "3487f647-bf4e-49fb-b43a-e510c740945b",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": 150,
-      "chest": 100,
-      "thigh": 80,
-      "upperArm": 65,
-      "waist": 125,
-      "hips": 110,
       "comment": ""
     }
   ]

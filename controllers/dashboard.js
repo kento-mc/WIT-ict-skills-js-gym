@@ -32,12 +32,12 @@ const dashboard = {
       memberid: loggedInMember.id,
       //trainerid: ,
       dateTime: date + " " + time,
-      weight: 150.0,
-      chest: 100,
-      thigh: 80,
-      upperArm: 65,
-      waist: 125.0,
-      hips: 110,
+      weight: request.body.weight,
+      chest: request.body.chest,
+      thigh: request.body.thigh,
+      upperArm: request.body.upperArm,
+      waist: request.body.waist,
+      hips: request.body.hips,
       comment: "",
     };
     logger.debug('Creating a new Assessment', newAssessment);

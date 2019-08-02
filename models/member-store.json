@@ -9,8 +9,7 @@
       "address": "address: 742 Evergreen Terrace, Springfield USA",
       "height": 1.8,
       "startingWeight": 120,
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "assessments": []
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
     },
     {
       "firstName": "Marge",
@@ -21,8 +20,7 @@
       "address": "address: 742 Evergreen Terrace, Springfield USA",
       "height": 1.5,
       "startingWeight": 65,
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "assessments": []
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
     }
   ]
 }

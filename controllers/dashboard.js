@@ -23,7 +23,7 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     
     const today = new Date();
-    const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    const date = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
     const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     //const dateTime = date+' '+time;
     
@@ -31,7 +31,7 @@ const dashboard = {
       id: uuid(),
       memberid: loggedInMember.id,
       //trainerid: ,
-      dateTime: date+' '+time,
+      dateTime: date + " " + time,
       weight: 150.0,
       chest: 100,
       thigh: 80,

@@ -6,10 +6,11 @@ const logger = require('../utils/logger');
 
 const gymUtility = {
 
-    calculateBMI(member, assessment)
+    calculateBMI(assessment)
     {
-    const bmiValue = assessment.weight / Math.pow(member.height, 2);
-    return (bmiValue *100) / 100.0;   // convert to two decimal places
+        const member = memberStore.getMemberById(assessmentStore.getAssessment(assessment.id).memberid)
+        const bmiValue = assessment.weight / Math.pow(member.height, 2);
+        return (bmiValue *100) / 100.0;   // convert to two decimal places
     }
 
 /*

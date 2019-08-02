@@ -12,7 +12,7 @@ const memberStore = {
     return this.store.findAll(this.collection);
   },
 
-  addMember(user) {
+  addMember(member) {
     this.store.add(this.collection, member);
     this.store.save();
   },

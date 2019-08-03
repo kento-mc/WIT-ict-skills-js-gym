@@ -1,5 +1,5 @@
 <td colspan="2">
-    ${_assessment.convertDateTime(_assessment.getDateTime())}
+    {{dateTime}}
 </td>
 <td>
     {{weight}} kg
@@ -20,17 +20,16 @@
     {{hips}} cm
 </td>
 <td>
-    #{if _assessment.trendIsPositive == true}
+    {{#if trendIsPositive}}
         <h1>
             <i class="green angle double up icon"></i>
         </h1>
-    #{/if}
-    #{else}
+    {{else}}
         <h1>
             <i class="red angle double down icon"></i>
         </h1>
-    #{/else}
+    {{/if}}
 </td>
 <td colspan="2">
-    ${_assessment.comment}
+    {{comment}}
 </td>

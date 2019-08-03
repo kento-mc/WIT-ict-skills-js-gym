@@ -53,6 +53,18 @@
       "waist": "7",
       "hips": "7",
       "comment": ""
+    },
+    {
+      "id": "7666e0f3-5200-4697-a11e-97d6b8d96177",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "dateTime": "2019-8-3 15:57:37",
+      "weight": "9",
+      "chest": "99",
+      "thigh": "9",
+      "upperArm": "9",
+      "waist": "9",
+      "hips": "9",
+      "comment": ""
     }
   ]
 }

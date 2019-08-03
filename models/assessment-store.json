@@ -41,6 +41,18 @@
       "hips": 80,
       "trendIsPositive": true,
       "comment": ""
+    },
+    {
+      "id": "a62dda3b-a5bb-4847-9d57-f2d03e622da3",
+      "memberid": "4a2f4acc-f10d-450f-98e3-caf79a1a706a",
+      "dateTime": "2019-8-3 15:39:21",
+      "weight": "7",
+      "chest": "7",
+      "thigh": "7",
+      "upperArm": "7",
+      "waist": "7",
+      "hips": "7",
+      "comment": ""
     }
   ]
 }

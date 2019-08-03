@@ -4,7 +4,7 @@ const logger = require("../utils/logger");
 const uuid = require('uuid');
 
 const accounts = require ("./accounts.js");
-//const memberStore = require('../models/member-store');
+const memberStore = require('../models/member-store');
 const assessmentStore = require("../models/assessment-store")
 
 const dashboard = {
@@ -13,6 +13,7 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: "Assessment dashboard",
+      BMI: memberStore.getMemberBMI(loggedInMember),
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };
     logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)

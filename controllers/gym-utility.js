@@ -6,12 +6,12 @@ const logger = require('../utils/logger');
 
 const gymUtility = {
 
-    calculateBMI(assessment)
+    calculateBMI: function(member, assessment)
     {
-        const member = memberStore.getMemberById(assessmentStore.getAssessment(assessment.id).memberid)
         const bmiValue = assessment.weight / Math.pow(member.height, 2);
-        return (bmiValue *100) / 100.0;   // convert to two decimal places
-    }
+        //return (bmiValue *100) / 100.0;   // convert to two decimal places
+        return Number(bmiValue.toFixed(2));
+    },
 
 /*
     public static String determineBMICategory(double bmiValue)
@@ -54,4 +54,6 @@ const gymUtility = {
         }
     }
 */
-}
+};
+
+module.exports = gymUtility;

@@ -1,0 +1,89 @@
+{{> menu id="member"}}
+
+<section class="ui segment">
+    {{> memberstats}}
+    <div class="ui two column grid basic middle aligned segment">
+        <div class="column">
+            <table class="ui fixed table">
+                <thead>
+                <tr>
+                    <th class="ui header" colspan="2">Member Info</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        {{member.firstName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        {{member.lastName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                    </td>
+                    <td>
+                        {{member.gender}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        {{member.email}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        {{member.password}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        {{member.address}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Height:
+                    </td>
+                    <td>
+                        {{member.height}} m
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Starting Weight:
+                    </td>
+                    <td>
+                        {{member.startingWeight}} kg
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <form class="ui stacked segment form" action="/member/update" method="POST">
+                <h3 class="ui header">Update Personal Info</h3>
+                {{> userform }}
+                {{> memberform }}
+            </form>
+        </div>
+    </div>
+</section>

@@ -9,17 +9,21 @@ const assessmentStore = require("../models/assessment-store")
 
 const dashboard = {
   index(request, response) {
-    logger.info("dashboard rendering");
+    logger.info("Dashboard rendering");
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
       title: "Assessment dashboard",
+      member: loggedInMember,
+      firstName: loggedInMember.firstName.toUpperCase(),
+      lastName: loggedInMember.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(loggedInMember),
+      isIdealWeight: true,
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };
     logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)
     response.render("dashboard", viewData);
   },
-  
+
   addAssessment(request, response) {
     const loggedInMember = accounts.getCurrentMember(request);
     

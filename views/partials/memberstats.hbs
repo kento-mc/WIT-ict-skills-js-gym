@@ -4,12 +4,11 @@
             <i class="big user icon"></i>
         </div>
         <div class="center aligned column">
-            #{if _member.isIdealWeight(_member.id) == true}
+            {{#if isIdealWeight}}
                 <i class="big green tachometer alternate icon"></i>
-            #{/if}
-            #{else}
+            {{else}}
                 <i class="big red tachometer alternate icon"></i>
-            #{/else}
+            {{/if}}
         </div>
         <div class="center aligned column">
             <i class="big heartbeat icon"></i>{{BMI}}
@@ -21,7 +20,7 @@
     <div class="ui four column grid">
         <div class="center aligned column">
             <header class="ui header">
-            ${_member.firstName.toUpperCase()} ${_member.lastName.toUpperCase()}
+                {{firstName}} {{lastName}}
             </header>
         </div>
         <div class="center aligned column">

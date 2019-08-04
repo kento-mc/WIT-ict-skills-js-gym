@@ -5,8 +5,9 @@ const router = express.Router();
 
 const dashboard = require('./controllers/dashboard.js');
 const about = require('./controllers/about.js');
-const playlist = require('./controllers/assessments.js');
+const assessments = require('./controllers/assessments.js');
 const accounts = require('./controllers/accounts.js');
+const userSettings = require('./controllers/user-settings');
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
@@ -18,6 +19,11 @@ router.post('/authenticate', accounts.authenticate);
 router.get('/dashboard', dashboard.index);
 router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
 router.post('/dashboard/addassessment', dashboard.addAssessment);
+
+router.get('/member', userSettings.memberIndex);
+router.post('/member/update', accounts.memberUpdate);
+router.get('/trainer', userSettings.trainerIndex);
+router.post('/trainer/update', accounts.trainerUpdate);
 
 router.get("/about", about.index);
 

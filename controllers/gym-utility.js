@@ -36,17 +36,25 @@ const gymUtility = {
 
     public static boolean isIdealBodyWeight(Member member, Assessment assessment)
     {
-        double maleIdealMemberWeight = ((Math.round((member.height - 1.524) / .0254)) * 2.3) + 50;
-        double femaleIdealMemberWeight = ((Math.round((member.height - 1.524) / .0254)) * 2.3) + 45.5;
+        double maleIdealMemberWeight = (((member.getHeight() - 1.524) / .0254) * 2.3) + 50;
+        double femaleIdealMemberWeight = (((member.getHeight() - 1.524) / .0254) * 2.3) + 45.5;
 
-        if (member.gender == "M") {
-            if (assessment.weight <= maleIdealMemberWeight + 2 && assessment.weight >= maleIdealMemberWeight - 2) {
+        double weight = member.getStartWeight();
+
+        if (assessment == null) {
+            weight = member.getStartWeight();
+        } else {
+            weight = assessment.getWeight();
+        }
+
+        if (member.getGender().equals("M")) {
+            if (weight <= maleIdealMemberWeight + .2 && weight >= maleIdealMemberWeight - .2) {
                 return true;
             } else {
                 return false;
             }
         } else {
-            if (assessment.weight <= femaleIdealMemberWeight + 2 && assessment.weight >= femaleIdealMemberWeight - 2) {
+            if (weight <= femaleIdealMemberWeight + .2 && weight >= femaleIdealMemberWeight - .2) {
                 return true;
             } else {
                 return false;

@@ -3,6 +3,7 @@
 const _ = require('lodash');
 const JsonStore = require('./json-store');
 
+const accounts = require ("../controllers/accounts.js");
 const assessmentStore = require("../models/assessment-store");
 const gymUtility = require("../controllers/gym-utility");
 
@@ -26,6 +27,17 @@ const memberStore = {
 
   getMemberByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
+  },
+
+  setGender(request) {
+    const member = accounts.getCurrentMember(request);
+    if (request.body.gender.charAt(0) == 'M' || request.body.gender.charAt(0) == 'm') {
+      member.gender = "M";
+    } else if (request.body.gender.charAt(0) == 'F' || request.body.gender.charAt(0) == 'f') {
+      member.gender = "F";
+    } else {
+      member.gender = "Unspecified";
+    }
   },
 
   getMemberBMI(member) {

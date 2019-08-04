@@ -37,7 +37,8 @@ const accounts = {
     member.id = uuid();
     memberStore.addMember(member);
     logger.info(`registering ${member.email}`);
-    response.redirect('/');
+    accounts.authenticate(request, response);
+    //response.redirect('/');
   },
 
   authenticate(request, response) {
@@ -58,6 +59,43 @@ const accounts = {
   getCurrentMember(request) {
     const memberEmail = request.cookies.member;
     return memberStore.getMemberByEmail(memberEmail);
+  },
+
+  memberUpdate(request, response) {
+    const member = accounts.getCurrentMember(request);
+    if (member) {
+      logger.info("Updating Member Info");
+      if (request.body.firstname) {
+        member.firstName = request.body.firstname;
+      }
+      if (request.body.lastname) {
+        member.lastName = request.body.lastname;
+      }
+      if (request.body.gender) {
+        member.gender = memberStore.setGender(request);
+      }
+      if (request.body.email) {
+        member.email = request.body.email;
+      }
+      if (request.body.password) {
+        member.password = request.body.email;
+      }
+      if (request.body.address) {
+        member.address = request.body.address;
+      }
+      if (request.body.height) {
+        member.height = request.body.height;
+      }
+      if (request.body.startingweight) {
+        member.startingWeight = request.body.startingweight;
+      }
+      //member.save();
+      response.redirect("/member");
+    }
+  },
+
+  trainerUpdate(request, response) {
+
   },
 };
 

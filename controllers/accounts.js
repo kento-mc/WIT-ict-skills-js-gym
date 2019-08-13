@@ -34,6 +34,7 @@ const accounts = {
 
   register(request, response) {
     const member = request.body;
+    member.gender = memberStore.setGender(request.body.gender);
     member.id = uuid();
     memberStore.addMember(member);
     logger.info(`registering ${member.email}`);
@@ -72,7 +73,7 @@ const accounts = {
         member.lastName = request.body.lastname;
       }
       if (request.body.gender) {
-        member.gender = memberStore.setGender(request);
+        member.gender = memberStore.setGender(request.body.gender);
       }
       if (request.body.email) {
         member.email = request.body.email;

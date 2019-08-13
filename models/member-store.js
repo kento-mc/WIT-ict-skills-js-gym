@@ -29,15 +29,16 @@ const memberStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
 
-  setGender(request) {
-    const member = accounts.getCurrentMember(request);
-    if (request.body.gender.charAt(0) == 'M' || request.body.gender.charAt(0) == 'm') {
-      member.gender = "M";
-    } else if (request.body.gender.charAt(0) == 'F' || request.body.gender.charAt(0) == 'f') {
-      member.gender = "F";
+  setGender(gender) {
+    // const member = accounts.getCurrentMember(request);
+    if (gender.charAt(0) == 'M' || gender.charAt(0) == 'm') {
+      gender = "M";
+    } else if (gender.charAt(0) == 'F' || gender.charAt(0) == 'f') {
+      gender = "F";
     } else {
-      member.gender = "Unspecified";
+      gender = "Unspecified";
     }
+    return gender;
   },
 
   getMemberBMI(member) {

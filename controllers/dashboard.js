@@ -35,6 +35,22 @@ const dashboard = {
     response.render("trainerdashboard", viewData);
   },
 
+  memberInfo(request, response) {
+    logger.info("Member detail dashboard rendering")
+    const member = memberStore.getMemberById(request.params.id);
+    const viewData = {
+      title: "Member detail",
+      member: member,
+      firstName: member.firstName.toUpperCase(),
+      lastName: member.lastName.toUpperCase(),
+      BMI: memberStore.getMemberBMI(member),
+      isIdealWeight: true,
+      assessments: assessmentStore.getMemberAssessments(member.id),
+    };
+    logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`)
+    response.render("memberdetail", viewData);
+  },
+
   addAssessment(request, response) {
     const loggedInMember = accounts.getCurrentMember(request);
     

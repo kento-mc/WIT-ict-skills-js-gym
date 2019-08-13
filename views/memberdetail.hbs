@@ -1,0 +1,27 @@
+{{> menu id="dashboard"}}
+
+<section class="ui segment">
+    {{> memberstats}}
+    {{#each assessments}}
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            {{> assessmentheader}}
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {{> assessmentdata}}
+        </tr>
+        </tbody>
+    </table>
+
+    <form class="ui segment form" action="/members/${member.id}/assessment/${assessment.id}/addcomment" method="POST">
+        <div class="field">
+            <label>Comment (one per assessment)</label>
+            <input placeholder="comment" type="text" name="comment">
+        </div>
+        <button class="ui blue submit button">Add Comment</button>
+    </form>
+    {{/each}}
+</section>

@@ -4,7 +4,7 @@
     <header class="ui header">
         Members
     </header>
-    #{list items:members, as:'member'}
+    {{#each members}}
     <section class="ui segment">
         <section class="ui grid">
             <div class="one wide center aligned column">
@@ -13,19 +13,19 @@
                 </h1>
             </div>
             <div class="three wide column">
-                <a href ="/members/${member.id}">
-                    <h3>${member.firstName} ${member.lastName}</h3>
+                <a href ="/members/{{id}}">
+                    <h3>{{firstName}} {{lastName}}</h3>
                 </a>
                 ${member.numAssessments()}
             </div>
             <div class="twelve wide right aligned column">
                 <h1>
-                    <a href="/trainerdashboard/${member.id}/deletemember">
+                    <a href="/trainerdashboard/{{id}}/deletemember">
                         <i class="red trash alternate icon"></i>
                     </a>
                 </h1>
             </div>
         </section>
     </section>
-    #{/list}
+    {{/each}}
 </section>

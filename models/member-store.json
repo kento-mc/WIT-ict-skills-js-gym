@@ -3,7 +3,7 @@
     {
       "firstName": "Homer",
       "lastName": "Simpson",
-      "gender": "M",
+      "gender": "Unspecified",
       "email": "homer@simpson.com",
       "password": "secret",
       "address": "742 Evergreen Terrace, Springfield USA",
@@ -23,8 +23,8 @@
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
     },
     {
-      "firstname": "Bart",
-      "lastname": "Simpson",
+      "firstName": "Bart",
+      "lastName": "Simpson",
       "gender": "M",
       "email": "bart@simpson.com",
       "password": "secret",
@@ -32,6 +32,28 @@
       "height": "1.2",
       "startingWeight": "40",
       "id": "7a859efc-5211-4d3f-a152-3a91834275bb"
+    },
+    {
+      "firstName": "Lisa",
+      "lastName": "Simpson",
+      "gender": "F",
+      "email": "lisa@simpson.com",
+      "password": "secret",
+      "address": "742 Evergreen Terrace, Springfield USA",
+      "height": "1.1",
+      "startingWeight": "35",
+      "id": "79bd1cb8-238d-48f5-ab56-b6dfa092ed31"
+    },
+    {
+      "firstName": "Moe",
+      "lastName": "Sizlak",
+      "gender": "Unspecified",
+      "email": "moe@sizlak.com",
+      "password": "secret",
+      "address": "Moe's Tavern",
+      "height": "1.6",
+      "startingWeight": "60",
+      "id": "5d6b1276-c52c-4eda-b52a-4408450ba6ea"
     }
   ]
 }

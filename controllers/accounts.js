@@ -66,11 +66,11 @@ const accounts = {
     const member = accounts.getCurrentMember(request);
     if (member) {
       logger.info("Updating Member Info");
-      if (request.body.firstname) {
-        member.firstName = request.body.firstname;
+      if (request.body.firstName) {
+        member.firstName = request.body.firstName;
       }
-      if (request.body.lastname) {
-        member.lastName = request.body.lastname;
+      if (request.body.lastName) {
+        member.lastName = request.body.lastName;
       }
       if (request.body.gender) {
         member.gender = memberStore.setGender(request.body.gender);
@@ -79,7 +79,7 @@ const accounts = {
         member.email = request.body.email;
       }
       if (request.body.password) {
-        member.password = request.body.email;
+        member.password = request.body.password;
       }
       if (request.body.address) {
         member.address = request.body.address;
@@ -87,8 +87,8 @@ const accounts = {
       if (request.body.height) {
         member.height = request.body.height;
       }
-      if (request.body.startingweight) {
-        member.startingWeight = request.body.startingweight;
+      if (request.body.startingWeight) {
+        member.startingWeight = request.body.startingWeight;
       }
       //member.save();
       response.redirect("/member");

@@ -12,7 +12,7 @@ const dashboard = {
     logger.info("Dashboard rendering");
     const loggedInMember = accounts.getCurrentMember(request);
     const viewData = {
-      title: "Assessment dashboard",
+      title: "Member dashboard",
       member: loggedInMember,
       firstName: loggedInMember.firstName.toUpperCase(),
       lastName: loggedInMember.lastName.toUpperCase(),
@@ -22,6 +22,17 @@ const dashboard = {
     };
     logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)
     response.render("dashboard", viewData);
+  },
+
+  trainerIndex(request, response) {
+    logger.info("Trainer dashboard rendering");
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const viewData = {
+      title: "Trainer dashboard",
+      members: memberStore.getAllMembers(),
+    };
+    logger.info(`${loggedInTrainer.firstName} ${loggedInTrainer.lastName} logged in`)
+    response.render("trainerdashboard", viewData);
   },
 
   addAssessment(request, response) {

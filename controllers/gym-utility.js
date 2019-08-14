@@ -13,10 +13,10 @@ const gymUtility = {
         return Number(bmiValue.toFixed(2));
     },
 
-/*
-    public static String determineBMICategory(double bmiValue)
+
+    determineBMICategory: function(bmiValue)
     {
-        String str;
+        let str;
         if (bmiValue < 16) {
             str = "SEVERELY UNDERWEIGHT";
         } else if (bmiValue >= 16 && bmiValue < 18.5) {
@@ -33,7 +33,7 @@ const gymUtility = {
         return str;
     }
 
-
+/*
     public static boolean isIdealBodyWeight(Member member, Assessment assessment)
     {
         double maleIdealMemberWeight = (((member.getHeight() - 1.524) / .0254) * 2.3) + 50;

@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 const uuid = require('uuid');
 
 const accounts = require ("./accounts.js");
+const gymUtility = require("../controllers/gym-utility");
 const memberStore = require('../models/member-store');
 const assessmentStore = require("../models/assessment-store")
 
@@ -17,6 +18,7 @@ const dashboard = {
       firstName: loggedInMember.firstName.toUpperCase(),
       lastName: loggedInMember.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(loggedInMember),
+      BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
       isIdealWeight: true,
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };

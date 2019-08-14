@@ -9,7 +9,8 @@
       "password": "secret",
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": 1.8,
-      "startingWeight": 120
+      "startingWeight": 120,
+      "numAssessments": 4
     },
     {
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
@@ -20,7 +21,8 @@
       "password": "secret",
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": 1.5,
-      "startingWeight": 65
+      "startingWeight": 65,
+      "numAssessments": 1
     },
     {
       "id": "7a859efc-5211-4d3f-a152-3a91834275bb",
@@ -31,7 +33,8 @@
       "password": "secret",
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": "1.2",
-      "startingWeight": "40"
+      "startingWeight": "40",
+      "numAssessments": 0
     },
     {
       "id": "79bd1cb8-238d-48f5-ab56-b6dfa092ed31",
@@ -42,7 +45,8 @@
       "password": "secret",
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": "1.1",
-      "startingWeight": "35"
+      "startingWeight": "35",
+      "numAssessments": 0
     },
     {
       "id": "5d6b1276-c52c-4eda-b52a-4408450ba6ea",
@@ -53,7 +57,8 @@
       "password": "secret",
       "address": "Moe's Tavern",
       "height": "1.6",
-      "startingWeight": "60"
+      "startingWeight": "60",
+      "numAssessments": 0
     }
   ]
 }

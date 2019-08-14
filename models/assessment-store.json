@@ -3,7 +3,7 @@
     {
       "id": "asdlfgkjsdg",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "3ad52697-6d98-4d80-8273",
       "dateTime": 2019,
       "weight": 150,
       "chest": 100,
@@ -17,7 +17,7 @@
     {
       "id": "asdlfgkjsd5324g",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "3ad52697-6d98-4d80-8273",
       "dateTime": 2019,
       "weight": 151,
       "chest": 100,
@@ -31,7 +31,7 @@
     {
       "id": "asdlfgkj3425sdg",
       "memberid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "3ad52697-6d98-4d80-8273",
       "dateTime": 2019,
       "weight": 65,
       "chest": 80,
@@ -82,16 +82,15 @@
       "comment": ""
     },
     {
-      "id": "b0875733-a0f7-4252-982f-96ae00a66d2b",
+      "id": "874e7084-3f26-4868-81c2-22556479b849",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "trainerid": "",
-      "dateTime": "2019-8-13 20:51:29",
-      "weight": "1",
-      "chest": "1",
-      "thigh": "1",
-      "upperArm": "1",
-      "waist": "1",
-      "hips": "1",
+      "dateTime": "2019-8-15 0:22:35",
+      "weight": "7",
+      "chest": "7",
+      "thigh": "7",
+      "upperArm": "7",
+      "waist": "7",
+      "hips": "7",
       "comment": ""
     }
   ]

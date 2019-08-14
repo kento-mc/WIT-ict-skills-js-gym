@@ -1,0 +1,71 @@
+{{> trainermenu id="trainer"}}
+
+<section class="ui segment">
+    <div class="ui two column grid basic middle aligned segment">
+        <div class="column">
+            <table class="ui fixed table">
+                <thead>
+                    <tr>
+                        <th class="ui header" colspan="2">Trainer Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            First Name:
+                        </td>
+                        <td>
+                            {{trainer.firstName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Name:
+                        </td>
+                        <td>
+                            {{trainer.lastName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender:
+                        </td>
+                        <td>
+                            {{trainer.gender}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email:
+                        </td>
+                        <td>
+                            {{trainer.email}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password:
+                        </td>
+                        <td>
+                            {{trainer.password}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address:
+                        </td>
+                        <td>
+                            {{trainer.address}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <form class="ui stacked segment form" action="/member/update" method="POST">
+                <h3 class="ui header">Update Personal Info</h3>
+                {{> userupdateform }}
+            </form>
+        </div>
+    </div>
+</section>

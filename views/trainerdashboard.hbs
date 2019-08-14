@@ -1,4 +1,4 @@
-{{> menu id="dashboard"}}
+{{> trainermenu id="dashboard"}}
 
 <section class="ui segment">
     <header class="ui header">
@@ -16,7 +16,9 @@
                 <a href ="/members/{{id}}">
                     <h3>{{firstName}} {{lastName}}</h3>
                 </a>
-                ${member.numAssessments()}
+                <p>
+                    Assessments: {{numAssessments}}
+                </p>
             </div>
             <div class="twelve wide right aligned column">
                 <h1>

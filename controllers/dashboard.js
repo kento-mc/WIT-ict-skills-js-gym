@@ -62,7 +62,7 @@ const dashboard = {
       firstName: member.firstName.toUpperCase(),
       lastName: member.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(member),
-      isIdealWeight: true,
+      isIdealWeight: gymUtility.isIdealBodyWeight(member, assessmentStore[0]),
       assessments: assessmentStore.getMemberAssessments(member.id),
     };
     logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`);
@@ -92,13 +92,18 @@ const dashboard = {
     };
     logger.debug('Creating a new Assessment', newAssessment);
     assessmentStore.addAssessment(newAssessment);
+    loggedInMember.numAssessments = assessmentStore.getMemberAssessments(loggedInMember.id).length;
+    memberStore.store.save();
     response.redirect('/dashboard');
   },
   
   deleteAssessment(request, response) {
     const assessmentId = request.params.id;
+    const member = memberStore.getMemberById(assessmentStore.getAssessment(assessmentId).memberid);
     logger.debug(`Deleting assessment ${assessmentId}`);
     assessmentStore.removeAssessment(assessmentId);
+    member.numAssessments = assessmentStore.getMemberAssessments(member.id).length;
+    memberStore.store.save();
     response.redirect('/dashboard');
   },
 

@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 const JsonStore = require('./json-store');
+const memberStore = require("../models/member-store");
 
 const assessmentStore = {
 
@@ -34,6 +35,17 @@ const assessmentStore = {
   removeAllAssessments() {
     this.store.removeAll(this.collection);
     this.store.save();
+  },
+
+  numAssessments(memberid) {
+    const num = this.getMemberAssessments(memberid).length;
+    let formattedNum = "";
+    if (num == 1) {
+      formattedNum = `${num} assessment`
+    } else {
+      formattedNum = `${num} assessments`
+    }
+    return formattedNum
   },
 
   /*addSong(id, song) {

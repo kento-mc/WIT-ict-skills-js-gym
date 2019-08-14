@@ -12,6 +12,14 @@ const dashboard = {
   index(request, response) {
     logger.info("Dashboard rendering");
     const loggedInMember = accounts.getCurrentMember(request);
+    let goalsOpen = "";
+      if (memberStore.goalsOpen(loggedInMember) == 1) {
+        goalsOpen = `${memberStore.goalsOpen(loggedInMember)} goal`;
+      } else {
+        goalsOpen = `${memberStore.goalsOpen(loggedInMember)} goals`;
+      }
+    let goalsAchieved = "";
+    let goalsMissed = "";
     const viewData = {
       title: "Member dashboard",
       member: loggedInMember,
@@ -20,9 +28,13 @@ const dashboard = {
       BMI: memberStore.getMemberBMI(loggedInMember),
       BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
       isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
+      goals: loggedInMember.goals,
+      goalsOpen: goalsOpen,
+      goalsAchieved: goalsAchieved,
+      goalsMissed: goalsMissed,
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
-    };
-    logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)
+    }
+    logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`);
     response.render("dashboard", viewData);
   },
 
@@ -53,7 +65,7 @@ const dashboard = {
       isIdealWeight: true,
       assessments: assessmentStore.getMemberAssessments(member.id),
     };
-    logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`)
+    logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`);
     response.render("memberdetail", viewData);
   },
 

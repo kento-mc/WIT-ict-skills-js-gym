@@ -52,6 +52,51 @@ const memberStore = {
         return 0.0;
     }
   },
+
+  goalsOpen(member) {
+    const goals = member.goals;
+    let openGoals = 0;
+    if (goals) {
+      for (let i = 0; i < goals.length; i++) {
+          if (member.goals[i].isOpen) {
+          openGoals++;
+        }
+      }
+      return openGoals;
+    } else {
+      return 0;
+    }
+  },
+
+  goalsAchieved(member) {
+    const goals = member.goals;
+    let achievedGoals = 0;
+    if (goals) {
+      for (let i = 0; i < goals.length; i++) {
+        if (member.goals[i].isAchieved) {
+          achievedGoals++;
+        }
+      }
+      return achievedGoals;
+    } else {
+      return 0;
+    }
+  },
+
+  goalsMissed(member) {
+    const goals = member.goals;
+    let missedGoals = 0;
+    if (goals) {
+      for (let i = 0; i < goals.length; i++) {
+        if (member.goals[i].isMissed) {
+          missedGoals++;
+        }
+      }
+      return missedGoals;
+    } else {
+      return 0;
+    }
+  },
 };
 
 module.exports = memberStore;

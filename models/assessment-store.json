@@ -1,9 +1,9 @@
 {
-  "assessmentCollection": [
+  "assessments": [
     {
       "id": "asdlfgkjsdg",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "trainerid": "049witejk",
+      "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "dateTime": 2019,
       "weight": 150,
       "chest": 100,
@@ -17,7 +17,7 @@
     {
       "id": "asdlfgkjsd5324g",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "trainerid": "owaetilajsed",
+      "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "dateTime": 2019,
       "weight": 151,
       "chest": 100,
@@ -31,7 +31,7 @@
     {
       "id": "asdlfgkj3425sdg",
       "memberid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "trainerid": "aoweitld",
+      "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "dateTime": 2019,
       "weight": 65,
       "chest": 80,
@@ -45,6 +45,7 @@
     {
       "id": "a62dda3b-a5bb-4847-9d57-f2d03e622da3",
       "memberid": "4a2f4acc-f10d-450f-98e3-caf79a1a706a",
+      "trainerid": "",
       "dateTime": "2019-8-3 15:39:21",
       "weight": "7",
       "chest": "7",
@@ -57,6 +58,7 @@
     {
       "id": "7666e0f3-5200-4697-a11e-97d6b8d96177",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
       "dateTime": "2019-8-3 15:57:37",
       "weight": "9",
       "chest": "99",
@@ -69,6 +71,7 @@
     {
       "id": "4126c045-c503-4f08-a2fa-3f0c16517183",
       "memberid": "365a9c65-ad68-4cdb-9a31-d7a5771bd514",
+      "trainerid": "",
       "dateTime": "2019-8-3 20:54:20",
       "weight": "9",
       "chest": "9",
@@ -81,6 +84,7 @@
     {
       "id": "b0875733-a0f7-4252-982f-96ae00a66d2b",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
       "dateTime": "2019-8-13 20:51:29",
       "weight": "1",
       "chest": "1",

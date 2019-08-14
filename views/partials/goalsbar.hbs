@@ -1,0 +1,21 @@
+<section class="ui segment">
+    <section class="ui grid">
+        <div class="two wide column">
+            <h2>
+                Goals:
+            </h2>
+        </div>
+        <div class ="twelve wide center aligned column">
+            <p>
+                {{#if goals}}
+                    {{goalsOpen}} open, # goals achieved, # goals missed
+                {{else}}
+                   You haven't set any goals! Set and manage goals:
+                {{/if}}
+            </p>
+        </div>
+        <div class="two wide right aligned column">
+            <a href="/members/goals">button</a>
+        </div>
+    </section>
+</section>

@@ -20,13 +20,13 @@ const goalStore = {
         return this.store.findBy(this.collection, { memberid: memberid });
     },
 
-    addGoal(assessment) {
+    addGoal(goal) {
         this.store.add(this.collection, goal);
         this.store.save();
     },
 
     removeGoal(id) {
-        const assessment = this.getGoal(id);
+        const goal = this.getGoal(id);
         this.store.remove(this.collection, goal);
         this.store.save();
     },

@@ -19,12 +19,17 @@ const goals = {
             firstName: loggedInMember.firstName.toUpperCase(),
             lastName: loggedInMember.lastName.toUpperCase(),
             BMI: memberStore.getMemberBMI(loggedInMember),
-            isIdealWeight: true,
+            BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
+            isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
             goals: goalStore.getMemberGoals(loggedInMember.id),
         };
     logger.info(`Viewing ${loggedInMember.firstName} ${loggedInMember.lastName}/'s goals`);
     response.render("goals", viewData);
     },
+
+    addGoal(request, response) {
+        //
+    }
 };
 
 module.exports = goals;

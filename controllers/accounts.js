@@ -100,7 +100,7 @@ const accounts = {
       if (request.body.startingWeight) {
         member.startingWeight = request.body.startingWeight;
       }
-      //member.save();
+      memberStore.save();
       response.redirect("/member");
     }
   },

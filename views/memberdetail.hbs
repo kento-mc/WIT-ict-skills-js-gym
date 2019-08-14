@@ -16,7 +16,7 @@
         </tbody>
     </table>
 
-    <form class="ui segment form" action="/members/${member.id}/assessment/${assessment.id}/addcomment" method="POST">
+    <form class="ui segment form" action="/members/assessment/{{id}}/addcomment" method="POST">
         <div class="field">
             <label>Comment (one per assessment)</label>
             <input placeholder="comment" type="text" name="comment">

@@ -26,6 +26,7 @@ router.post('/member/update', accounts.memberUpdate);
 router.get('/trainer', userSettings.trainerIndex);
 router.post('/trainer/update', accounts.trainerUpdate);
 router.get('/members/:id', dashboard.memberInfo);
+router.post('/members/assessment/:id/addcomment', dashboard.addComment);
 
 router.get("/about", about.index);
 

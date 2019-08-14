@@ -37,7 +37,11 @@ const dashboard = {
 
   memberInfo(request, response) {
     logger.info("Member detail dashboard rendering")
-    const member = memberStore.getMemberById(request.params.id);
+    let member = memberStore.getMemberById(request.params.id);
+    if (!member) {
+      member = memberStore.getMemberById(assessmentStore.getAssessment(request.params.id).memberid);
+    }
+    //const assessment  = assessmentStore.getMemberAssessments()
     const viewData = {
       title: "Member detail",
       member: member,
@@ -81,7 +85,16 @@ const dashboard = {
     const assessmentId = request.params.id;
     logger.debug(`Deleting assessment ${assessmentId}`);
     assessmentStore.removeAssessment(assessmentId);
-    response.redirect('/dashboard/');
+    response.redirect('/dashboard');
+  },
+
+  addComment(request, response) {
+    const assessment = assessmentStore.getAssessment(request.params.id);
+    const member = memberStore.getMemberById(assessment.memberid);
+    assessment.comment = request.body.comment;
+    //assessmentStore.save();
+    response.redirect(`/members/${member.id}`);
+    logger.info(`Comment "${assessment.comment}" added to assessment dated ${assessment.dateTime} for ${member.firstName} ${member.lastName}`)
   },
 };
 

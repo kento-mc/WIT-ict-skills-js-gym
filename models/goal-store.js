@@ -16,7 +16,7 @@ const goalStore = {
         return this.store.findOneBy(this.collection, { id: id });
     },
 
-    getMemberGoalss(memberid) {
+    getMemberGoals(memberid) {
         return this.store.findBy(this.collection, { memberid: memberid });
     },
 

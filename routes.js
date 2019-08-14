@@ -31,6 +31,6 @@ router.post('/members/assessment/:id/addcomment', dashboard.addComment);
 
 router.get('/member/goals', goals.index);
 
-router.get("/about", about.index);
+router.get('/about', about.index);
 
 module.exports = router;

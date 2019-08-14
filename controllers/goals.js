@@ -20,7 +20,7 @@ const goals = {
             lastName: loggedInMember.lastName.toUpperCase(),
             BMI: memberStore.getMemberBMI(loggedInMember),
             isIdealWeight: true,
-            goals: goalStore.getMemberGoalss(loggedInMember.id),
+            goals: goalStore.getMemberGoals(loggedInMember.id),
         };
     logger.info(`Viewing ${loggedInMember.firstName} ${loggedInMember.lastName}/'s goals`);
     response.render("goals", viewData);

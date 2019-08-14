@@ -31,23 +31,22 @@ const gymUtility = {
             str = "SEVERELY OBESE";
         }
         return str;
-    }
+    },
 
-/*
-    public static boolean isIdealBodyWeight(Member member, Assessment assessment)
+    isIdealBodyWeight: function(member, assessment)
     {
-        double maleIdealMemberWeight = (((member.getHeight() - 1.524) / .0254) * 2.3) + 50;
-        double femaleIdealMemberWeight = (((member.getHeight() - 1.524) / .0254) * 2.3) + 45.5;
+        const maleIdealMemberWeight = (((member.height - 1.524) / .0254) * 2.3) + 50;
+        const femaleIdealMemberWeight = (((member.height - 1.524) / .0254) * 2.3) + 45.5;
 
-        double weight = member.getStartWeight();
+        let weight = member.startingWeight;
 
         if (assessment == null) {
-            weight = member.getStartWeight();
+            weight = member.startingWeight;
         } else {
-            weight = assessment.getWeight();
+            weight = assessment.weight;
         }
 
-        if (member.getGender().equals("M")) {
+        if (member.gender == "M") {
             if (weight <= maleIdealMemberWeight + .2 && weight >= maleIdealMemberWeight - .2) {
                 return true;
             } else {
@@ -61,7 +60,6 @@ const gymUtility = {
             }
         }
     }
-*/
 };
 
 module.exports = gymUtility;

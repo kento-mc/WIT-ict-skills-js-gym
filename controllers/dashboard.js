@@ -19,7 +19,7 @@ const dashboard = {
       lastName: loggedInMember.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(loggedInMember),
       BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
-      isIdealWeight: true,
+      isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
       assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
     };
     logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)

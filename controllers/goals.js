@@ -13,6 +13,7 @@ const goals = {
     index(request, response) {
         logger.info("Member goals page rendering");
         const loggedInMember = accounts.getCurrentMember(request);
+
         const viewData = {
             title: "Member goals",
             member: loggedInMember,
@@ -21,9 +22,9 @@ const goals = {
             BMI: memberStore.getMemberBMI(loggedInMember),
             BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
             isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
-            goals: goalStore.getMemberGoals(loggedInMember.id),
+            goals: goalStore.checkGoals(loggedInMember.id), //goalStore.getMemberGoals(loggedInMember.id),
         };
-    logger.info(`Viewing ${loggedInMember.firstName} ${loggedInMember.lastName}/'s goals`);
+    logger.info(`Viewing ${loggedInMember.firstName} ${loggedInMember.lastName}\'s goals`);
     response.render("goals", viewData);
     },
 

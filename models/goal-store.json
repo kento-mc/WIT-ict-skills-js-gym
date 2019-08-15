@@ -4,11 +4,13 @@
       "id": "lkjgisjgsd",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "category": "Weight",
+      "category": "weight",
       "target": 80,
       "deadline": "2019-8-3",
-      "isOpen": true,
-      "isAchieved": false
+      "isOpen": false,
+      "isAchieved": false,
+      "isMissed": true,
+      "status": "Missed :("
     }
   ]
 }

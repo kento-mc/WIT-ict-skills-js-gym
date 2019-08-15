@@ -1,13 +1,38 @@
 {{> menu id="dashboard"}}
 
-{{> memberstats}}
 <section class="ui segment">
-    <header class="ui header">
-        {{member.firstName}} {{member.lastName}}'s goals
-    </header>
-    {{#each goals}}
-        <section class="ui segment">
-            {{category}} {{target}}
-        </section>
-    {{/each}}
+{{> memberstats}}
+    <section class="ui segment">
+        <header class="ui header">
+            {{member.firstName}} {{member.lastName}}'s goals
+        </header>
+        <table class="ui fixed table">
+            <thead>
+                <tr>
+                    <th class="ui header">Category</th>
+                    <th class="ui header">Target</th>
+                    <th class="ui header">Deadline</th>
+                    <th class="ui header">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each goals}}
+                    <tr>
+                        <td>
+                            {{category}}
+                        </td>
+                        <td>
+                            {{target}}
+                        </td>
+                        <td>
+                            {{deadline}}
+                        </td>
+                        <td>
+                            {{status}}
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
 </section>

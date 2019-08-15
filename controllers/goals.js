@@ -13,6 +13,10 @@ const goals = {
     index(request, response) {
         logger.info("Member goals page rendering");
         const loggedInMember = accounts.getCurrentMember(request);
+        const assessments = assessmentStore.getMemberAssessments(loggedInMember.id);
+        const sortedAssessments = assessments.sort(function(a, b) {
+            return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+        });
 
         const viewData = {
             title: "Member goals",
@@ -22,7 +26,7 @@ const goals = {
             BMI: memberStore.getMemberBMI(loggedInMember),
             BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
             isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
-            latestAssessment: assessmentStore.getMemberAssessments(loggedInMember.id)[0],
+            latestAssessment: sortedAssessments[0],
             goals: goalStore.checkGoals(loggedInMember.id), //goalStore.getMemberGoals(loggedInMember.id),
         };
     logger.info(`Viewing ${loggedInMember.firstName} ${loggedInMember.lastName}\'s goals`);

@@ -19,6 +19,7 @@ const userSettings = {
             firstName: loggedInMember.firstName.toUpperCase(),
             lastName: loggedInMember.lastName.toUpperCase(),
             BMI: memberStore.getMemberBMI(loggedInMember),
+            BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
             isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
             assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
         };

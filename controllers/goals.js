@@ -35,7 +35,7 @@ const goals = {
             id: uuid(),
             memberid: loggedInMember.id,
             trainerid: "",
-            category: request.body.weight,
+            category: request.body.category,
             target: request.body.target,
             deadline: request.body.deadline,
             isOpen: true,

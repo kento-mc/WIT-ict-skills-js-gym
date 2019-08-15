@@ -78,6 +78,30 @@
       "waist": "7",
       "hips": "7",
       "comment": ""
+    },
+    {
+      "id": "d47d90df-22b4-4180-a2bb-78ca62651939",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "dateTime": "2019-8-15 23:11:27",
+      "weight": "8",
+      "chest": "8",
+      "thigh": "8",
+      "upperArm": "8",
+      "waist": "8",
+      "hips": "8",
+      "comment": ""
+    },
+    {
+      "id": "67e31948-1e8b-430b-8a6e-1dad2b908327",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "dateTime": "2019-8-15 23:11:52",
+      "weight": "9",
+      "chest": "9",
+      "thigh": "9",
+      "upperArm": "9",
+      "waist": "9",
+      "hips": "9",
+      "comment": ""
     }
   ]
 }

@@ -12,14 +12,19 @@ const dashboard = {
   index(request, response) {
     logger.info("Dashboard rendering");
     const loggedInMember = accounts.getCurrentMember(request);
-    let goalsOpen = "";
+    const assessments = assessmentStore.getMemberAssessments(loggedInMember.id);
+    const sortedAssessments = assessments.sort(function(a, b) {
+            return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+          });   // used https://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects-by-property
+
+    /*let goalsOpen = "";
       if (memberStore.goalsOpen(loggedInMember) == 1) {
         goalsOpen = `${memberStore.goalsOpen(loggedInMember)} goal`;
       } else {
         goalsOpen = `${memberStore.goalsOpen(loggedInMember)} goals`;
       }
     let goalsAchieved = "";
-    let goalsMissed = "";
+    let goalsMissed = "";*/
     const viewData = {
       title: "Member dashboard",
       member: loggedInMember,
@@ -29,10 +34,10 @@ const dashboard = {
       BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
       isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
       goals: loggedInMember.goals,
-      goalsOpen: goalsOpen,
+      /*goalsOpen: goalsOpen,
       goalsAchieved: goalsAchieved,
-      goalsMissed: goalsMissed,
-      assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
+      goalsMissed: goalsMissed,*/
+      assessments: sortedAssessments,
     }
     logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`);
     response.render("dashboard", viewData);
@@ -55,7 +60,11 @@ const dashboard = {
     if (!member) {
       member = memberStore.getMemberById(assessmentStore.getAssessment(request.params.id).memberid);
     }
-    //const assessment  = assessmentStore.getMemberAssessments()
+    const assessments = assessmentStore.getMemberAssessments(member.id);
+    const sortedAssessments = assessments.sort(function(a, b) {
+      return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+    });
+
     const viewData = {
       title: "Member detail",
       member: member,
@@ -63,7 +72,7 @@ const dashboard = {
       lastName: member.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(member),
       isIdealWeight: gymUtility.isIdealBodyWeight(member, assessmentStore[0]),
-      assessments: assessmentStore.getMemberAssessments(member.id),
+      assessments: sortedAssessments,
     };
     logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`);
     response.render("memberdetail", viewData);

@@ -16,7 +16,7 @@ const dashboard = {
     const sortedAssessments = assessments.sort(function(a, b) {
             return parseFloat(a.dateTime) + parseFloat(b.dateTime);
           });   // used https://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects-by-property
-
+    assessmentStore.updateTrend(loggedInMember.id);
     /*let goalsOpen = "";
       if (memberStore.goalsOpen(loggedInMember) == 1) {
         goalsOpen = `${memberStore.goalsOpen(loggedInMember)} goal`;

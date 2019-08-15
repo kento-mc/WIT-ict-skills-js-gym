@@ -48,25 +48,24 @@ const assessmentStore = {
     return formattedNum
   },
 
-  /*addSong(id, song) {
-    const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
-    
-    let duration = 0;
-    
-    for (let i = 0; i < playlist.songs.length; i++) {
-      duration += playlist.songs[i].duration;
-    }
-    playlist.duration = duration;
-    this.store.save();
-  },
+  updateTrend(memberid) {
+    const assessments = assessmentStore.getMemberAssessments(memberid);
+    const sortedAssessments = assessments.sort(function(a, b) {
+                                return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+                              });
+    if (sortedAssessments.length >= 2)
+    {
+      for (let i = 0; i < sortedAssessments.length - 1; i++)
+      {
+        if (sortedAssessments[i].weight < sortedAssessments[i+1].weight) {
+          sortedAssessments[i].trendIsPositive = true;
+        } else {
+          sortedAssessments[i].trendIsPositive = false;
 
-  removeSong(id, songId) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    _.remove(songs, { id: songId});
-    this.store.save();
-  },*/
+        }
+      }
+    }
+  },
 };
 
 module.exports = assessmentStore;

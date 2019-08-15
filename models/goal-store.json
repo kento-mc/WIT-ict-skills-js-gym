@@ -32,6 +32,29 @@
       "isAchieved": false,
       "isMissed": false,
       "status": "Open"
+    },
+    {
+      "id": "bbe375e6-ad65-45c2-95e0-94e344405c5c",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
+      "category": "upperArm",
+      "target": "15",
+      "isOpen": true,
+      "isAchieved": false,
+      "isMissed": false,
+      "status": "Open"
+    },
+    {
+      "id": "b2d433d1-4a06-4b48-92ff-326af4518cf4",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
+      "category": "hips",
+      "target": "30",
+      "deadline": "2019-9-10",
+      "isOpen": true,
+      "isAchieved": false,
+      "isMissed": false,
+      "status": "Open"
     }
   ]
 }

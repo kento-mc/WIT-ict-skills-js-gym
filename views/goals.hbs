@@ -2,6 +2,53 @@
 
 <section class="ui segment">
 {{> memberstats}}
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            {{> assessmentheader}}
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    {{latestAssessment.dateTime}}
+                </td>
+                <td>
+                    {{latestAssessment.weight}} kg
+                </td>
+                <td>
+                    {{latestAssessment.chest}} cm
+                </td>
+                <td>
+                    {{latestAssessment.thigh}} cm
+                </td>
+                <td>
+                    {{latestAssessment.upperArm}} cm
+                </td>
+                <td>
+                    {{latestAssessment.waist}} cm
+                </td>
+                <td>
+                    {{latestAssessment.hips}} cm
+                </td>
+                <td>
+                    {{#if latestAssessment.trendIsPositive}}
+                        <h1>
+                            <i class="green angle double up icon"></i>
+                        </h1>
+                    {{else}}
+                        <h1>
+                            <i class="red angle double down icon"></i>
+                        </h1>
+                    {{/if}}
+                </td>
+                <td colspan="2">
+                    {{latestAssessment.comment}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <section class="ui segment">
         <header class="ui header">
             {{member.firstName}} {{member.lastName}}'s goals

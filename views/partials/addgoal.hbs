@@ -1,0 +1,52 @@
+<form class="ui segment form" action="/member/goals/addgoal" method="POST">
+    <div class="three fields">
+        <div class="field">
+            <label>Category</label>
+            <div class="ui selection dropdown">
+                <input type="hidden" name="category">
+                <i class="dropdown icon"></i>
+                <div class="default text">Category</div>
+                <div class="menu">
+                    <div class="item" data-value="weight">Weight</div>
+                    <div class="item" data-value="chest">Chest</div>
+                    <div class="item" data-value="thigh">Thigh</div>
+                    <div class="item" data-value="upperArm">Bicep</div>
+                    <div class="item" data-value="waist">Waist</div>
+                    <div class="item" data-value="hips">Hips</div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label>Target</label>
+            {{#if weight}}
+                <input placeholder="00.0 kg" type="number" name="target">
+            {{else}}
+                <input placeholder="00.0 cm" type="number" name="target">
+            {{/if}}
+        </div>
+        <div class="field">
+            <label>Date</label>
+            <div class="ui calendar" id="example1">
+                <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Date">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="ui blue submit button">Add Goal</button>
+</form>
+
+<script>
+    $('.ui.dropdown')
+            .dropdown()
+    ;
+
+    $('#example1')
+            .calendar();
+</script>
+
+<!--
+https://semantic-ui.com/modules/dropdown.html#/usage
+https://stackoverflow.com/questions/33201533/datepicker-in-semantic-ui
+-->

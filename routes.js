@@ -30,6 +30,7 @@ router.get('/members/:id', dashboard.memberInfo);
 router.post('/members/assessment/:id/addcomment', dashboard.addComment);
 
 router.get('/member/goals', goals.index);
+router.post('/member/goals/addgoal', goals.addGoal);
 
 router.get('/about', about.index);
 

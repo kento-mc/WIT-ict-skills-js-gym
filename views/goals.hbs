@@ -6,6 +6,7 @@
         <header class="ui header">
             {{member.firstName}} {{member.lastName}}'s goals
         </header>
+        {{> addgoal}}
         <table class="ui fixed table">
             <thead>
                 <tr>
@@ -23,6 +24,11 @@
                         </td>
                         <td>
                             {{target}}
+                            {{#ifEquals category "weight"}}
+                                kg
+                            {{else}}
+                                cm
+                            {{/ifEquals}}
                         </td>
                         <td>
                             {{deadline}}
@@ -36,3 +42,9 @@
         </table>
     </section>
 </section>
+
+<script>
+    Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    });
+</script>

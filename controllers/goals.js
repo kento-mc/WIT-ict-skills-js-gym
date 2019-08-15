@@ -29,7 +29,23 @@ const goals = {
     },
 
     addGoal(request, response) {
-        //
+        const loggedInMember = accounts.getCurrentMember(request);
+
+        const goal = {
+            id: uuid(),
+            memberid: loggedInMember.id,
+            trainerid: "",
+            category: request.body.weight,
+            target: request.body.target,
+            deadline: request.body.deadline,
+            isOpen: true,
+            isAchieved: false,
+            isMissed: false,
+            status: "Open",
+        }
+        goalStore.addGoal(goal);
+        logger.info(`Adding ${request.body.category} goal for ${loggedInMember.firstName} ${loggedInMember.lastName}, with a deadline of ${request.body.deadline}`);
+        response.redirect('/member/goals');
     }
 };
 

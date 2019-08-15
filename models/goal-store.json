@@ -11,6 +11,16 @@
       "isAchieved": false,
       "isMissed": true,
       "status": "Missed :("
+    },
+    {
+      "id": "e4a3c0af-c121-4976-b061-d72b8b9a6f0e",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
+      "target": "94",
+      "isOpen": true,
+      "isAchieved": false,
+      "isMissed": false,
+      "status": "Open"
     }
   ]
 }

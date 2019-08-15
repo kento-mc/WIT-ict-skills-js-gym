@@ -29,6 +29,12 @@ const memberStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
 
+  removeMember(id) {
+    const member = this.getMemberById(id);
+    this.store.remove(this.collection, member);
+    this.store.save();
+  },
+
   setGender(gender) {
     // const member = accounts.getCurrentMember(request);
     if (gender.charAt(0) == 'M' || gender.charAt(0) == 'm') {

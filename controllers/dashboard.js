@@ -69,6 +69,15 @@ const dashboard = {
     response.render("memberdetail", viewData);
   },
 
+  deleteMember(request, response) {
+    const memberid = request.params.id;
+    const member = memberStore.getMemberById(memberid);
+    logger.debug(`Deleting member ${member.firstName} ${member.lastName}`);
+    memberStore.removeMember(memberid);
+    memberStore.store.save();
+    response.redirect('/trainerdashboard');
+  },
+
   addAssessment(request, response) {
     const loggedInMember = accounts.getCurrentMember(request);
     

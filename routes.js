@@ -19,6 +19,7 @@ router.post('/authenticate', accounts.authenticate);
 
 router.get('/dashboard', dashboard.index);
 router.get('/trainerdashboard', dashboard.trainerIndex);
+router.get('/trainerdashboard/deletemember/:id', dashboard.deleteMember);
 router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 

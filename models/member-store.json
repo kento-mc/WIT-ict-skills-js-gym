@@ -10,7 +10,7 @@
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": 1.8,
       "startingWeight": 120,
-      "numAssessments": 4
+      "numAssessments": 3
     },
     {
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
@@ -46,18 +46,6 @@
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": "1.1",
       "startingWeight": "35",
-      "numAssessments": 0
-    },
-    {
-      "id": "5d6b1276-c52c-4eda-b52a-4408450ba6ea",
-      "firstName": "Moe",
-      "lastName": "Sizlak",
-      "gender": "Unspecified",
-      "email": "moe@sizlak.com",
-      "password": "secret",
-      "address": "Moe's Tavern",
-      "height": "1.6",
-      "startingWeight": "60",
       "numAssessments": 0
     }
   ]

@@ -15,8 +15,12 @@ const goals = {
         const loggedInMember = accounts.getCurrentMember(request);
         const assessments = assessmentStore.getMemberAssessments(loggedInMember.id);
         const sortedAssessments = assessments.sort(function(a, b) {
-            return parseFloat(a.dateTime) + parseFloat(b.dateTime);
-        });
+                                    return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+                                });
+        const goals = goalStore.checkGoals(loggedInMember.id);
+        const sortedGoals = goals.sort(function(a,b) {
+                                    return parseFloat(a.deadline) + parseFloat(b.deadline);
+                                });
 
         const viewData = {
             title: "Member goals",
@@ -27,7 +31,7 @@ const goals = {
             BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
             isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, sortedAssessments[0]),
             latestAssessment: sortedAssessments[0],
-            goals: goalStore.checkGoals(loggedInMember.id), //goalStore.getMemberGoals(loggedInMember.id),
+            goals: sortedGoals,
         };
     logger.info(`Viewing ${loggedInMember.firstName} ${loggedInMember.lastName}\'s goals`);
     response.render("goals", viewData);
@@ -36,6 +40,10 @@ const goals = {
     addGoal(request, response) {
         const loggedInMember = accounts.getCurrentMember(request);
         const dateString = request.body.deadline;
+        let isWeight = false;
+        if (request.body.category == "weight") {
+            isWeight = true;
+        }
 
         const goal = {
             id: uuid(),
@@ -44,10 +52,12 @@ const goals = {
             category: request.body.category,
             target: request.body.target,
             deadline: assessmentStore.formattedDate(dateString),
+            dateString: dateString,
             isOpen: true,
             isAchieved: false,
             isMissed: false,
             status: "Open",
+            isWeight: isWeight,
         }
         goalStore.addGoal(goal);
         logger.info(`Adding ${request.body.category} goal for ${loggedInMember.firstName} ${loggedInMember.lastName}, with a deadline of ${request.body.deadline}`);

@@ -6,22 +6,27 @@
       "trainerid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "category": "weight",
       "target": 80,
-      "deadline": "2019-8-3",
+      "deadline": "2019-8-3 22:43:31",
+      "dateString": "2019-8-3",
       "isOpen": false,
       "isAchieved": true,
       "isMissed": false,
-      "status": "Achieved!"
+      "status": "Achieved!",
+      "isWeight": true
     },
     {
       "id": "e4a3c0af-c121-4976-b061-d72b8b9a6f0e",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "trainerid": "",
+      "category": "weight",
       "target": "94",
-      "deadline": "2019-8-3",
-      "isOpen": true,
-      "isAchieved": false,
+      "deadline": "2019-8-3 22:43:31",
+      "dateString": "2019-8-3",
+      "isOpen": false,
+      "isAchieved": true,
       "isMissed": false,
-      "status": "Open"
+      "status": "Achieved!",
+      "isWeight": true
     },
     {
       "id": "06d610a2-5dc2-44d0-bb6a-8ab5c1a98975",
@@ -29,11 +34,13 @@
       "trainerid": "",
       "category": "thigh",
       "target": "20",
-      "deadline": "2019-8-3",
-      "isOpen": true,
+      "deadline": "2019-8-3 22:43:31",
+      "dateString": "2019-8-3",
+      "isOpen": false,
       "isAchieved": false,
-      "isMissed": false,
-      "status": "Open"
+      "isMissed": true,
+      "status": "Missed :(",
+      "isWeight": false
     },
     {
       "id": "3844b4c5-0b13-43ae-b738-9b03f91b9c69",
@@ -42,10 +49,26 @@
       "category": "weight",
       "target": "75",
       "deadline": "2019-8-16 22:43:31",
+      "dateString": "2019-8-16",
       "isOpen": false,
       "isAchieved": true,
       "isMissed": false,
-      "status": "Achieved!"
+      "status": "Achieved!",
+      "isWeight": true
+    },
+    {
+      "id": "82891242-abd5-4b08-b316-a8880f3162a4",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
+      "category": "chest",
+      "target": "7",
+      "deadline": "2019-8-17 0:27:36",
+      "dateString": "2019-8-17",
+      "isOpen": true,
+      "isAchieved": false,
+      "isMissed": false,
+      "status": "Open",
+      "isWeight": false
     }
   ]
 }

@@ -46,7 +46,10 @@ const goalStore = {
         });
         const latestAssessment = sortedAssessments[0];
 
-        const now = new Date();
+        const today = new Date();
+        const dateString = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
+        const now = assessmentStore.formattedDate(dateString);
+
 
         for (let i =0; i < goals.length; i++) {
 
@@ -72,7 +75,7 @@ const goalStore = {
                     goals[i].isOpen = false;
                     goals[i].isAchieved = true;
                     goals[i].isMissed = false;
-                } else if (now > deadline) {
+                } else if (parseFloat(now) > parseFloat(deadline)) {
                     goals[i].isOpen = false;
                     goals[i].isAchieved = false;
                     goals[i].isMissed = true;
@@ -86,7 +89,7 @@ const goalStore = {
                     goals[i].isOpen = false;
                     goals[i].isAchieved = true;
                     goals[i].isMissed = false;
-                } else if (now > deadline) {
+                } else if (Date.parse(now) > Date.parse(deadline)) {
                     goals[i].isOpen = false;
                     goals[i].isAchieved = false;
                     goals[i].isMissed = true;

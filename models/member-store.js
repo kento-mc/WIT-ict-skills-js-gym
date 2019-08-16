@@ -5,6 +5,7 @@ const JsonStore = require('./json-store');
 
 const accounts = require ("../controllers/accounts.js");
 const assessmentStore = require("../models/assessment-store");
+const goalStore = require("../models/goal-store");
 const gymUtility = require("../controllers/gym-utility");
 
 const memberStore = {
@@ -63,11 +64,11 @@ const memberStore = {
   },
 
   goalsOpen(member) {
-    const goals = member.goals;
+    const goals = goalStore.getMemberGoals(member.id);
     let openGoals = 0;
     if (goals) {
       for (let i = 0; i < goals.length; i++) {
-          if (member.goals[i].isOpen) {
+          if (goals[i].isOpen) {
           openGoals++;
         }
       }
@@ -78,11 +79,11 @@ const memberStore = {
   },
 
   goalsAchieved(member) {
-    const goals = member.goals;
+    const goals = goalStore.getMemberGoals(member.id);
     let achievedGoals = 0;
     if (goals) {
       for (let i = 0; i < goals.length; i++) {
-        if (member.goals[i].isAchieved) {
+        if (goals[i].isAchieved) {
           achievedGoals++;
         }
       }
@@ -93,11 +94,11 @@ const memberStore = {
   },
 
   goalsMissed(member) {
-    const goals = member.goals;
+    const goals = goalStore.getMemberGoals(member.id);
     let missedGoals = 0;
     if (goals) {
       for (let i = 0; i < goals.length; i++) {
-        if (member.goals[i].isMissed) {
+        if (goals[i].isMissed) {
           missedGoals++;
         }
       }

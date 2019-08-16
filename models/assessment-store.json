@@ -81,15 +81,15 @@
       "trendIsPositive": false
     },
     {
-      "id": "9cc265cf-73be-4947-a4d6-dac9d41fdd5f",
+      "id": "26aa814b-4895-43b4-aadf-91bf67c47582",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "dateTime": "2019-8-16 21:22:55",
+      "dateTime": "2019-8-16 22:41:30",
       "weight": "75",
-      "chest": "",
-      "thigh": "",
-      "upperArm": "",
-      "waist": "",
-      "hips": "",
+      "chest": "8",
+      "thigh": "8",
+      "upperArm": "8",
+      "waist": "8",
+      "hips": "8",
       "comment": ""
     }
   ]

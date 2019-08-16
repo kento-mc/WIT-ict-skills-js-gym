@@ -35,6 +35,9 @@ const dashboard = {
       BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
       isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, sortedAssessments[0]),
       goals: goalStore.checkGoals(loggedInMember.id),
+      goalsOpen: memberStore.goalsOpen(loggedInMember),
+      goalsAchieved: memberStore.goalsAchieved(loggedInMember),
+      goalsMissed: memberStore.goalsMissed(loggedInMember),
       /*goalsOpen: goalsOpen,
       goalsAchieved: goalsAchieved,
       goalsMissed: goalsMissed,*/
@@ -91,17 +94,16 @@ const dashboard = {
 
   addAssessment(request, response) {
     const loggedInMember = accounts.getCurrentMember(request);
-    
     const today = new Date();
-    const date = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
-    const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    const dateString = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
+
     //const dateTime = date+' '+time;
     
     const newAssessment = {
       id: uuid(),
       memberid: loggedInMember.id,
       //trainerid: ,
-      dateTime: date + " " + time,
+      dateTime: assessmentStore.formattedDate(dateString),
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,

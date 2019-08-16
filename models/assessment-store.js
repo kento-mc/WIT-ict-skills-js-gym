@@ -37,6 +37,13 @@ const assessmentStore = {
     this.store.save();
   },
 
+  formattedDate(dateString) {
+    const today = new Date();
+    const timeString = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    const dateTime = dateString + " " + timeString;
+    return dateTime;
+  },
+
   numAssessments(memberid) {
     const num = this.getMemberAssessments(memberid).length;
     let formattedNum = "";

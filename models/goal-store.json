@@ -8,15 +8,16 @@
       "target": 80,
       "deadline": "2019-8-3",
       "isOpen": false,
-      "isAchieved": false,
-      "isMissed": true,
-      "status": "Missed :("
+      "isAchieved": true,
+      "isMissed": false,
+      "status": "Achieved!"
     },
     {
       "id": "e4a3c0af-c121-4976-b061-d72b8b9a6f0e",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "trainerid": "",
       "target": "94",
+      "deadline": "2019-8-3",
       "isOpen": true,
       "isAchieved": false,
       "isMissed": false,
@@ -28,33 +29,23 @@
       "trainerid": "",
       "category": "thigh",
       "target": "20",
+      "deadline": "2019-8-3",
       "isOpen": true,
       "isAchieved": false,
       "isMissed": false,
       "status": "Open"
     },
     {
-      "id": "bbe375e6-ad65-45c2-95e0-94e344405c5c",
+      "id": "3844b4c5-0b13-43ae-b738-9b03f91b9c69",
       "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "trainerid": "",
-      "category": "bicep",
-      "target": "15",
-      "isOpen": true,
-      "isAchieved": false,
+      "category": "weight",
+      "target": "75",
+      "deadline": "2019-8-16 22:43:31",
+      "isOpen": false,
+      "isAchieved": true,
       "isMissed": false,
-      "status": "Open"
-    },
-    {
-      "id": "b2d433d1-4a06-4b48-92ff-326af4518cf4",
-      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "trainerid": "",
-      "category": "hips",
-      "target": "30",
-      "deadline": "2019-9-10",
-      "isOpen": true,
-      "isAchieved": false,
-      "isMissed": false,
-      "status": "Open"
+      "status": "Achieved!"
     }
   ]
 }

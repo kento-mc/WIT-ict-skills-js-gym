@@ -37,6 +37,9 @@ const accounts = {
     const member = request.body;
     member.gender = memberStore.setGender(request.body.gender);
     member.id = uuid();
+    member.openGoals = 0;
+    member.achievedGoals = 0;
+    member.missedGoals = 0;
     memberStore.addMember(member);
     logger.info(`registering ${member.email}`);
     accounts.authenticate(request, response);

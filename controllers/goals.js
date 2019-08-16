@@ -35,6 +35,7 @@ const goals = {
 
     addGoal(request, response) {
         const loggedInMember = accounts.getCurrentMember(request);
+        const dateString = request.body.deadline;
 
         const goal = {
             id: uuid(),
@@ -42,7 +43,7 @@ const goals = {
             trainerid: "",
             category: request.body.category,
             target: request.body.target,
-            deadline: request.body.deadline,
+            deadline: assessmentStore.formattedDate(dateString),
             isOpen: true,
             isAchieved: false,
             isMissed: false,

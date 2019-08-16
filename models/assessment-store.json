@@ -8,10 +8,10 @@
       "weight": 150,
       "chest": 100,
       "thigh": 80,
-      "upperArm": 65,
+      "bicep": 65,
       "waist": 125,
       "hips": 110,
-      "trendIsPositive": true,
+      "trendIsPositive": false,
       "comment": ""
     },
     {
@@ -22,7 +22,7 @@
       "weight": 65,
       "chest": 80,
       "thigh": 40,
-      "upperArm": 23,
+      "bicep": 23,
       "waist": 65,
       "hips": 80,
       "trendIsPositive": true,
@@ -36,7 +36,7 @@
       "weight": "7",
       "chest": "7",
       "thigh": "7",
-      "upperArm": "7",
+      "bicep": "7",
       "waist": "7",
       "hips": "7",
       "comment": ""
@@ -49,7 +49,7 @@
       "weight": "9",
       "chest": "9",
       "thigh": "9",
-      "upperArm": "9",
+      "bicep": "9",
       "waist": "9",
       "hips": "9",
       "comment": ""
@@ -61,7 +61,7 @@
       "weight": "145",
       "chest": "95",
       "thigh": "70",
-      "upperArm": "64",
+      "bicep": "64",
       "waist": "115",
       "hips": "100",
       "comment": "",
@@ -74,9 +74,22 @@
       "weight": "146",
       "chest": "96",
       "thigh": "71",
-      "upperArm": "65",
+      "bicep": "65",
       "waist": "115",
       "hips": "101",
+      "comment": "",
+      "trendIsPositive": false
+    },
+    {
+      "id": "9cc265cf-73be-4947-a4d6-dac9d41fdd5f",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "dateTime": "2019-8-16 21:22:55",
+      "weight": "75",
+      "chest": "",
+      "thigh": "",
+      "upperArm": "",
+      "waist": "",
+      "hips": "",
       "comment": ""
     }
   ]

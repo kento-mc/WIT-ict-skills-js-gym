@@ -13,6 +13,10 @@ const userSettings = {
     memberIndex(request, response) {
         logger.info("Member settings rendering");
         const loggedInMember = accounts.getCurrentMember(request);
+        const assessments = assessmentStore.getMemberAssessments(loggedInMember.id);
+        const sortedAssessments = assessments.sort(function(a, b) {
+            return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+        });
         const viewData = {
             title: "Member Settings",
             member: loggedInMember,
@@ -20,7 +24,7 @@ const userSettings = {
             lastName: loggedInMember.lastName.toUpperCase(),
             BMI: memberStore.getMemberBMI(loggedInMember),
             BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
-            isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
+            isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, sortedAssessments[0]),
             assessments: assessmentStore.getMemberAssessments(loggedInMember.id),
         };
         logger.info(`${loggedInMember.firstName} ${loggedInMember.lastName} logged in`)

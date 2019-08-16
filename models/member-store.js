@@ -50,6 +50,9 @@ const memberStore = {
   getMemberBMI(member) {
     //const member = memberStore.getMemberById(id);
     const memberAssessments = assessmentStore.getMemberAssessments(member.id);
+    const sortedAssessments = memberAssessments.sort(function(a, b) {
+      return parseFloat(a.dateTime) + parseFloat(b.dateTime);
+    });
     if (memberAssessments.length > 0){
       const currentAssessment = memberAssessments[0];
       const bmi = gymUtility.calculateBMI(member, currentAssessment);

@@ -4,13 +4,13 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "firstName": "Homer",
       "lastName": "Simpson",
-      "gender": "Unspecified",
+      "gender": "M",
       "email": "homer@simpson.com",
       "password": "secret",
       "address": "742 Evergreen Terrace, Springfield USA",
       "height": 1.8,
       "startingWeight": 120,
-      "numAssessments": 3
+      "numAssessments": 4
     },
     {
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",

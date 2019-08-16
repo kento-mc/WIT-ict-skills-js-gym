@@ -6,7 +6,8 @@ const uuid = require('uuid');
 const accounts = require ("./accounts.js");
 const gymUtility = require("../controllers/gym-utility");
 const memberStore = require('../models/member-store');
-const assessmentStore = require("../models/assessment-store")
+const assessmentStore = require("../models/assessment-store");
+const goalStore = require("../models/goal-store");
 
 const dashboard = {
   index(request, response) {
@@ -32,8 +33,8 @@ const dashboard = {
       lastName: loggedInMember.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(loggedInMember),
       BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
-      isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
-      goals: loggedInMember.goals,
+      isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, sortedAssessments[0]),
+      goals: goalStore.checkGoals(loggedInMember.id),
       /*goalsOpen: goalsOpen,
       goalsAchieved: goalsAchieved,
       goalsMissed: goalsMissed,*/
@@ -71,7 +72,8 @@ const dashboard = {
       firstName: member.firstName.toUpperCase(),
       lastName: member.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(member),
-      isIdealWeight: gymUtility.isIdealBodyWeight(member, assessmentStore[0]),
+      BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
+      isIdealWeight: gymUtility.isIdealBodyWeight(member, sortedAssessments[0]),
       assessments: sortedAssessments,
     };
     logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`);

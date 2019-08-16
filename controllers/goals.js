@@ -25,7 +25,7 @@ const goals = {
             lastName: loggedInMember.lastName.toUpperCase(),
             BMI: memberStore.getMemberBMI(loggedInMember),
             BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
-            isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, assessmentStore[0]),
+            isIdealWeight: gymUtility.isIdealBodyWeight(loggedInMember, sortedAssessments[0]),
             latestAssessment: sortedAssessments[0],
             goals: goalStore.checkGoals(loggedInMember.id), //goalStore.getMemberGoals(loggedInMember.id),
         };

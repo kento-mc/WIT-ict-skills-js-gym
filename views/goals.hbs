@@ -57,10 +57,14 @@
         <table class="ui fixed table">
             <thead>
                 <tr>
-                    <th class="ui header">Category</th>
-                    <th class="ui header">Target</th>
-                    <th class="ui header">Deadline</th>
-                    <th class="ui header">Status</th>
+                    {{#if goals}}
+                        <th class="ui header">Category</th>
+                        <th class="ui header">Target</th>
+                        <th class="ui header">Deadline</th>
+                        <th class="ui header">Status</th>
+                    {{else}}
+                        <th class="ui centered header" colspan="4">No goals set!</th>
+                    {{/if}}
                 </tr>
             </thead>
             <tbody>

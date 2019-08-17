@@ -68,6 +68,7 @@ const dashboard = {
     const sortedAssessments = assessments.sort(function(a, b) {
       return parseFloat(a.dateTime) + parseFloat(b.dateTime);
     });
+    assessmentStore.updateTrend(member.id);
 
     const viewData = {
       title: "Member detail",
@@ -75,8 +76,12 @@ const dashboard = {
       firstName: member.firstName.toUpperCase(),
       lastName: member.lastName.toUpperCase(),
       BMI: memberStore.getMemberBMI(member),
-      BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(loggedInMember)),
+      BMICategory: gymUtility.determineBMICategory(memberStore.getMemberBMI(member)),
       isIdealWeight: gymUtility.isIdealBodyWeight(member, sortedAssessments[0]),
+      goals: goalStore.checkGoals(member.id),
+      goalsOpen: memberStore.goalsOpen(member),
+      goalsAchieved: memberStore.goalsAchieved(member),
+      goalsMissed: memberStore.goalsMissed(member),
       assessments: sortedAssessments,
     };
     logger.info(`Viewing ${member.firstName} ${member.lastName}/'s info`);

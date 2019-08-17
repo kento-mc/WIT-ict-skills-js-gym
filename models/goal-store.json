@@ -69,6 +69,20 @@
       "isMissed": false,
       "status": "Open",
       "isWeight": false
+    },
+    {
+      "id": "6c8c700b-d0dd-4289-b8cd-d62e79f16995",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
+      "category": "hips",
+      "target": "7",
+      "deadline": "2019-8-17 23:51:37",
+      "dateString": "2019-8-17",
+      "isOpen": false,
+      "isAchieved": false,
+      "isMissed": true,
+      "status": "Missed :(",
+      "isWeight": false
     }
   ]
 }

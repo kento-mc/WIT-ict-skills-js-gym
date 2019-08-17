@@ -1,4 +1,8 @@
-{{> menu id="dashboard"}}
+{{#if trainer}}
+    {{> trainermenu id="dashboard"}}
+{{else}}
+    {{> menu id="dashboard"}}
+{{/if}}
 
 <section class="ui segment">
 {{> memberstats}}

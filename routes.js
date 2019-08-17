@@ -13,7 +13,8 @@ const userSettings = require('./controllers/user-settings');
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
-router.get('/logout', accounts.logout);
+router.get('/logoutmember', accounts.logoutMember);
+router.get('/logouttrainer', accounts.logoutTrainer);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
@@ -30,8 +31,8 @@ router.post('/trainer/update', accounts.trainerUpdate);
 router.get('/members/:id', dashboard.memberInfo);
 router.post('/members/assessment/:id/addcomment', dashboard.addComment);
 
-router.get('/member/goals', goals.index);
-router.post('/member/goals/addgoal', goals.addGoal);
+router.get('/member/:id/goals', goals.index);
+router.post('/member/:id/goals/addgoal', goals.addGoal);
 
 router.get('/about', about.index);
 

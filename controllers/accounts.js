@@ -21,11 +21,15 @@ const accounts = {
     response.render('login', viewData);
   },
 
-  logout(request, response) {
-    response.cookie('playlist', '');
+  logoutMember(request, response) {
+    response.cookie('member', '');
     response.redirect('/');
   },
 
+  logoutTrainer(request, response) {
+    response.cookie('trainer', '');
+    response.redirect('/');
+  },
   signup(request, response) {
     const viewData = {
       title: 'Login to the Service',

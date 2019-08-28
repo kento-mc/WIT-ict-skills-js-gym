@@ -99,22 +99,76 @@ const dashboard = {
 
   addAssessment(request, response) {
     const loggedInMember = accounts.getCurrentMember(request);
+    const prevMemAssessments = assessmentStore.getMemberAssessments(loggedInMember.id)
     const today = new Date();
     const dateString = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
-
     //const dateTime = date+' '+time;
+
+    let weight = 0;
+    if (request.body.weight) {
+      weight = request.body.weight;
+    } else {
+      if (prevMemAssessments) {
+        weight = prevMemAssessments[prevMemAssessments.length - 1].weight;
+      }
+    }
+
+    let chest = 0;
+    if (request.body.chest) {
+      chest = request.body.chest;
+    } else {
+      if (prevMemAssessments) {
+        chest = prevMemAssessments[prevMemAssessments.length - 1].chest;
+      }
+    }
+
+    let thigh = 0;
+    if (request.body.thigh) {
+      thigh = request.body.thigh;
+    } else {
+      if (prevMemAssessments) {
+        thigh = prevMemAssessments[prevMemAssessments.length - 1].thigh;
+      }
+    }
+
+    let bicep = 0;
+    if (request.body.bicep) {
+      bicep = request.body.bicep;
+    } else {
+      if (prevMemAssessments) {
+        bicep = prevMemAssessments[prevMemAssessments.length - 1].bicep;
+      }
+    }
+
+    let waist = 0;
+    if (request.body.waist) {
+      waist = request.body.waist;
+    } else {
+      if (prevMemAssessments) {
+        waist = prevMemAssessments[prevMemAssessments.length - 1].waist;
+      }
+    }
+
+    let hips = 0;
+    if (request.body.hips) {
+      hips = request.body.hips;
+    } else {
+      if (prevMemAssessments) {
+        hips = prevMemAssessments[prevMemAssessments.length - 1].hips;
+      }
+    }
     
     const newAssessment = {
       id: uuid(),
       memberid: loggedInMember.id,
       //trainerid: ,
       dateTime: assessmentStore.formattedDate(dateString),
-      weight: request.body.weight,
-      chest: request.body.chest,
-      thigh: request.body.thigh,
-      upperArm: request.body.upperArm,
-      waist: request.body.waist,
-      hips: request.body.hips,
+      weight: weight,
+      chest: chest,
+      thigh: thigh,
+      bicep: bicep,
+      waist: waist,
+      hips: hips,
       comment: "",
     };
     logger.debug('Creating a new Assessment', newAssessment);

@@ -64,7 +64,7 @@ const assessmentStore = {
     {
       for (let i = 0; i < sortedAssessments.length - 1; i++)
       {
-        if (parseFloat(sortedAssessments[i].weight) < parseFloat(sortedAssessments[i+1].weight)) {
+        if (parseFloat(sortedAssessments[i].weight) <= parseFloat(sortedAssessments[i+1].weight)) {
           sortedAssessments[i].trendIsPositive = true;
         } else {
           sortedAssessments[i].trendIsPositive = false;

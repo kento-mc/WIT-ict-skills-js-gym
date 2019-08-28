@@ -88,9 +88,33 @@
       "chest": "8",
       "thigh": "8",
       "bicep": "8",
-      "upperArm": "8",
       "waist": "8",
       "hips": "8",
+      "comment": ""
+    },
+    {
+      "id": "9de57416-0e77-4c25-ab66-1cf1643df184",
+      "memberid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "dateTime": "2019-8-28 23:46:39",
+      "weight": "63",
+      "chest": 80,
+      "thigh": 40,
+      "bicep": 23,
+      "waist": 65,
+      "hips": "",
+      "comment": "",
+      "trendIsPositive": true
+    },
+    {
+      "id": "5908a616-c37e-45b9-91e9-7532b8a7850b",
+      "memberid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "dateTime": "2019-8-28 23:47:32",
+      "weight": "63",
+      "chest": "45",
+      "thigh": 40,
+      "bicep": 23,
+      "waist": 65,
+      "hips": "",
       "comment": ""
     }
   ]

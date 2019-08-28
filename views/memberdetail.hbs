@@ -3,26 +3,35 @@
 <section class="ui segment">
     {{> memberstats}}
     {{> goalsbar}}
-    {{#each assessments}}
-    <table class="ui fixed table">
-        <thead>
-        <tr>
-            {{> assessmentheader}}
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            {{> assessmentdata}}
-        </tr>
-        </tbody>
-    </table>
 
-    <form class="ui segment form" action="/members/assessment/{{id}}/addcomment" method="POST">
-        <div class="field">
-            <label>Comment (one per assessment)</label>
-            <input placeholder="comment" type="text" name="comment">
+    {{#if assessments}}
+        {{#each assessments}}
+            <table class="ui fixed table">
+                <thead>
+                <tr>
+                    {{> assessmentheader}}
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {{> assessmentdata}}
+                </tr>
+                </tbody>
+            </table>
+
+            <form class="ui segment form" action="/members/assessment/{{id}}/addcomment" method="POST">
+                <div class="field">
+                    <label>Comment (one per assessment)</label>
+                    <input placeholder="comment" type="text" name="comment">
+                </div>
+                <button class="ui blue submit button">Add Comment</button>
+            </form>
+        {{/each}}
+    {{else}}
+        <div class="ui segment">
+            <h3>
+                No assessments
+            </h3>
         </div>
-        <button class="ui blue submit button">Add Comment</button>
-    </form>
-    {{/each}}
+    {{/if}}
 </section>

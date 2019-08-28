@@ -97,6 +97,20 @@
       "isMissed": false,
       "status": "Open",
       "isWeight": true
+    },
+    {
+      "id": "a6581481-70d0-4bad-82ca-871a91265552",
+      "memberid": "7a859efc-5211-4d3f-a152-3a91834275bb",
+      "trainerid": "",
+      "category": "weight",
+      "target": "50",
+      "deadline": "2019-10-10 23:2:24",
+      "dateString": "2019-10-10",
+      "isOpen": true,
+      "isAchieved": false,
+      "isMissed": false,
+      "status": "Open",
+      "isWeight": true
     }
   ]
 }

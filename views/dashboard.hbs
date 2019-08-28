@@ -4,5 +4,7 @@
   {{> memberstats}}
   {{> goalsbar}}
   {{> addassessment}}
-  {{> listassessments}}
+  {{#if assessments}}
+     {{> listassessments}}
+  {{/if}}
 </section>

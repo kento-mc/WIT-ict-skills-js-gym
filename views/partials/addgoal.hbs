@@ -18,18 +18,14 @@
         </div>
         <div class="field">
             <label>Target</label>
-            {{#if weight}}
-                <input placeholder="00.0 kg" type="number" name="target">
-            {{else}}
-                <input placeholder="00.0 cm" type="number" name="target">
-            {{/if}}
+                <input placeholder="00.0" type="number" name="target">
         </div>
         <div class="field">
             <label>Deadline</label>
             <div class="ui calendar" id="example1">
                 <div class="ui input left icon">
                     <i class="calendar icon"></i>
-                    <input type="text" name="deadline" placeholder="Date">
+                    <input type="text" name="deadline" placeholder="yyyy-mm-dd">
                 </div>
             </div>
         </div>

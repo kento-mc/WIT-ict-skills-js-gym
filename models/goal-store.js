@@ -56,82 +56,94 @@ const goalStore = {
             const category = goals[i].category;
             const deadline = goals[i].deadline;
 
-            if (category == "weight") {
-                if (latestAssessment.weight <= goals[i].target && latestAssessment.dateTime <= deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = true;
-                    goals[i].isMissed = false;
-                } else if (now > deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = true;
-                } else {
-                    goals[i].isOpen = true;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = false;
+            if (assessments.length > 0) {
+                if (category == "weight") {
+                    if (latestAssessment.weight <= goals[i].target && latestAssessment.dateTime <= deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = true;
+                        goals[i].isMissed = false;
+                    } else if (now > deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = true;
+                    } else {
+                        goals[i].isOpen = true;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = false;
+                    }
+                } else if (category == "chest") {
+                    if (latestAssessment.chest <= goals[i].target && latestAssessment.dateTime <= deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = true;
+                        goals[i].isMissed = false;
+                    } else if (parseFloat(now) > parseFloat(deadline)) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = true;
+                    } else {
+                        goals[i].isOpen = true;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = false;
+                    }
+                } else if (category == "thigh") {
+                    if (latestAssessment.thigh <= goals[i].target && latestAssessment.dateTime <= deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = true;
+                        goals[i].isMissed = false;
+                    } else if (Date.parse(now) > Date.parse(deadline)) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = true;
+                    } else {
+                        goals[i].isOpen = true;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = false;
+                    }
+                } else if (category == "bicep") {
+                    if (latestAssessment.bicep <= goals[i].target && latestAssessment.dateTime <= deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = true;
+                        goals[i].isMissed = false;
+                    } else if (parseFloat(now) > parseFloat(deadline)) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = true;
+                    } else {
+                        goals[i].isOpen = true;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = false;
+                    }
+                } else if (category == "waist") {
+                    if (latestAssessment.waist <= goals[i].target && latestAssessment.dateTime <= deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = true;
+                        goals[i].isMissed = false;
+                    } else if (parseFloat(now) > parseFloat(deadline)) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = true;
+                    } else {
+                        goals[i].isOpen = true;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = false;
+                    }
+                } else if (category == "hips") {
+                    if (latestAssessment.hips <= goals[i].target && latestAssessment.dateTime <= deadline) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = true;
+                        goals[i].isMissed = false;
+                    } else if (parseFloat(now) > parseFloat(deadline)) {
+                        goals[i].isOpen = false;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = true;
+                    } else {
+                        goals[i].isOpen = true;
+                        goals[i].isAchieved = false;
+                        goals[i].isMissed = false;
+                    }
                 }
-            } else if (category == "chest") {
-                if (latestAssessment.chest <= goals[i].target && latestAssessment.dateTime <= deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = true;
-                    goals[i].isMissed = false;
-                } else if (parseFloat(now) > parseFloat(deadline)) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = true;
-                } else {
-                    goals[i].isOpen = true;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = false;
-                }
-            } else if (category == "thigh") {
-                if (latestAssessment.thigh <= goals[i].target && latestAssessment.dateTime <= deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = true;
-                    goals[i].isMissed = false;
-                } else if (Date.parse(now) > Date.parse(deadline)) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = true;
-                } else {
-                    goals[i].isOpen = true;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = false;
-                }
-            } else if (category == "bicep") {
-                if (latestAssessment.bicep <= goals[i].target && latestAssessment.dateTime <= deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = true;
-                    goals[i].isMissed = false;
-                } else if (now > deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = true;
-                } else {
-                    goals[i].isOpen = true;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = false;
-                }
-            } else if (category == "waist") {
-                if (latestAssessment.waist <= goals[i].target && latestAssessment.dateTime <= deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = true;
-                    goals[i].isMissed = false;
-                } else if (now > deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = true;
-                } else {
-                    goals[i].isOpen = true;
-                    goals[i].isAchieved = false;
-                    goals[i].isMissed = false;
-                }
-            } else if (category == "hips") {
-                if (latestAssessment.hips <= goals[i].target && latestAssessment.dateTime <= deadline) {
-                    goals[i].isOpen = false;
-                    goals[i].isAchieved = true;
-                    goals[i].isMissed = false;
-                } else if (now > deadline) {
+            } else {
+                if (parseFloat(now) > parseFloat(deadline)){
                     goals[i].isOpen = false;
                     goals[i].isAchieved = false;
                     goals[i].isMissed = true;

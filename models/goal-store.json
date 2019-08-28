@@ -83,6 +83,20 @@
       "isMissed": true,
       "status": "Missed :(",
       "isWeight": false
+    },
+    {
+      "id": "3efac3a4-10b8-470b-9f96-c3de22098c9f",
+      "memberid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "trainerid": "",
+      "category": "weight",
+      "target": "72",
+      "deadline": "2019-8-29 19:45:48",
+      "dateString": "2019-8-29",
+      "isOpen": true,
+      "isAchieved": false,
+      "isMissed": false,
+      "status": "Open",
+      "isWeight": true
     }
   ]
 }

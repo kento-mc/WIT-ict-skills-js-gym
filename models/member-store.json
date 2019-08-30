@@ -59,6 +59,21 @@
       "openGoals": 0,
       "achievedGoals": 0,
       "missedGoals": 0
+    },
+    {
+      "firstName": "Moe",
+      "lastName": "Sizlak",
+      "gender": "M",
+      "email": "moe@simpson.com",
+      "password": "secret",
+      "address": "Moe's Tavern",
+      "height": "2",
+      "startingWeight": "62",
+      "id": "1a37ded8-3d20-4e0e-a47a-bcc2a24262fc",
+      "openGoals": 0,
+      "achievedGoals": 0,
+      "missedGoals": 0,
+      "numAssessments": 2
     }
   ]
 }

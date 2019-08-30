@@ -116,6 +116,30 @@
       "waist": 65,
       "hips": "",
       "comment": ""
+    },
+    {
+      "id": "2b14c5f0-2172-42cc-a79e-80e864246cf6",
+      "memberid": "1a37ded8-3d20-4e0e-a47a-bcc2a24262fc",
+      "dateTime": "2019-8-30 21:29:51",
+      "weight": "61",
+      "chest": "40",
+      "thigh": "20",
+      "bicep": "20",
+      "waist": "30",
+      "hips": "34",
+      "comment": ""
+    },
+    {
+      "id": "55174ad2-526a-43c5-a876-f22197d13c9b",
+      "memberid": "1a37ded8-3d20-4e0e-a47a-bcc2a24262fc",
+      "dateTime": "2019-8-30 21:31:26",
+      "weight": "60",
+      "chest": "40",
+      "thigh": "20",
+      "bicep": "20",
+      "waist": "30",
+      "hips": "34",
+      "comment": ""
     }
   ]
 }
